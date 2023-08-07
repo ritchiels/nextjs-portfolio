@@ -23,6 +23,27 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fade-in 1s ease-in-out;
+}
+
+.fade-in-header {
+    animation: fade-in 2s ease-in-out;
+}
+
+.fade-in-text {
+    animation: fade-in 3s ease-in-out;
+}
+
 /*tailwind stylings*/
 /* .head_text {
     @apply mt-5 text-2xl leading-[1.15] text-black sm:text-6xl;
