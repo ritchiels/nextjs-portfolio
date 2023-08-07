@@ -15,9 +15,16 @@
     pointer-events: none;
 }
 
+.profile-image {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
 /*tailwind stylings*/
-.head_text {
-    @apply mt-5 text-5xl leading-[1.15] text-black sm:text-6xl;
+/* .head_text {
+    @apply mt-5 text-2xl leading-[1.15] text-black sm:text-6xl;
   }
-  
+   */

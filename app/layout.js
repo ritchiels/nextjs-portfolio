@@ -1,4 +1,5 @@
 import '@/styles/global.css'
+import Footer from '@/components/Footer'
 
 export const metadata = {
   title: "Ritchie's Portfolio",
@@ -9,6 +10,7 @@ export default function RootLayout({ children }) {
  return (
     <html lang="en">
       <body>{children}</body>
+      <Footer />
     </html>
   )
 }
