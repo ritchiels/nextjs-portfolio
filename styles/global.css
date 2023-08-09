@@ -12,7 +12,6 @@
     display: flex;
     justify-content: center;
     padding: 120px 24px 160px 24px;
-    pointer-events: none;
 }
 
 .profile-image {
@@ -22,6 +21,15 @@
     border-radius: 50%;
     /* border: #376996 8px solid; */
     box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.socials {
+    transition: color 0.1s ease;
+    
+    &:hover {
+        color: '#93B7BE';
+        transition-delay: 0.1s ease;
+    }
 }
 
 @keyframes fade-in {
@@ -42,6 +50,10 @@
 }
 
 .fade-in-text {
+    animation: fade-in 3s ease-in-out;
+}
+
+.fade-in-socials {
     animation: fade-in 3s ease-in-out;
 }
 
