@@ -20,22 +20,23 @@ const Home = () => {
                     width={250}
                     className="profile-image rounded-full fade-in-pic"
                 />
-                <div className="flex flex-col mb-10">
+                <div className="flex flex-col">
                     <h1 className="text-5xl font-semibold text-lapiz-lazuli fade-in-header">Ritchie Simmons</h1>
-                    <p className="text-sm font-semibold font-comfortaa text-gray-600 mt-2 ml-2 fade-in-text">
+                    <p className="text-sm font-semibold font-comfortaa text-gray-600 mt-2 ml-2 mb-4 fade-in-text">
                         Full-Stack web developer with a focus in React & MongoDB.
                     </p>
-                </div>
-                <div className="fade-in-socials text-lapiz-lazuli space-x-4">
-                    <a href="https://github.com/ritchiels" className="socials">
-                        <FontAwesomeIcon icon={faGithub} size="xl" />
-                    </a>
-                    <a href="mailto:ritchie.simmons@gmail.com" className="socials">
-                        <FontAwesomeIcon icon={faEnvelope} size="xl" />
-                    </a>
-                    <a href="https://www.linkedin.com/in/ritchie-simmons-060443231" className="socials">
-                        <FontAwesomeIcon icon={faLinkedin} size="xl" />
-                    </a>
+                    <div className="flex space-x-8 ml-20 items-center text-lapiz-lazuli fade-in-socials">
+                        {/* <div style={{ width: '5rem' }}></div> */}
+                        <a href="https://github.com/ritchiels" className="socials">
+                            <FontAwesomeIcon icon={faGithub} size="xl" />
+                        </a>
+                        <a href="mailto:ritchie.simmons@gmail.com" className="socials">
+                            <FontAwesomeIcon icon={faEnvelope} size="xl" />
+                        </a>
+                        <a href="https://www.linkedin.com/in/ritchie-simmons-060443231" className="socials">
+                            <FontAwesomeIcon icon={faLinkedin} size="xl" />
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -45,3 +46,6 @@ const Home = () => {
 
 export default Home
 
+    // empty div to help with spacing:
+
+    // <div style={{ width: '5rem' }}></div>
