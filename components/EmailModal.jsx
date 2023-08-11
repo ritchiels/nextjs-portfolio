@@ -13,11 +13,14 @@ import {
     Toast
 } from 'reactstrap'
 import emailjs from '@emailjs/browser'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const EmailModal = () => {
     const [modal, setModal] = useState(false);
 
     const toggle = () => setModal(!modal);
+
+    console.log('Email toggle prop:', toggle);
 
     const form = useRef();
 
@@ -36,43 +39,33 @@ const EmailModal = () => {
             }, (error) => {
                 console.log(error.text);
             });
-        };
+    };
 
-        return (
-            <>
-                <Modal isOpen={modal}>
-                    <ModalHeader toggle={toggle} keyboard={true}>
-                        Send me an email 📩
-                    </ModalHeader>
-                    <ModalBody>
-                        <form ref={form} onSubmit={sendEmail}>
-                            <label>Name</label>
-                            <input type="text" name="user_name" />
-                            <label>Email</label>
-                            <input type="email" name="user_email" />
-                            <label>Message</label>
-                            <textarea name="message" />
-                            <input type="submit" value="Send" />
-                        </form>
-                    </ModalBody>
-                    <ModalFooter>
-                        <Button color="primary" type="submit" onClick={sendEmail}>Send</Button>
-                        <Button color="danger" onClick={toggle}>Close</Button>
-                    </ModalFooter>
-                </Modal>
-            </>
-        )
-    }
+    return (
+        <>
+            <Modal isOpen={modal} style={{ zIndex: 1100 }}>
+                <ModalHeader toggle={toggle}>
+                    Send me an email 📩
+                </ModalHeader>
+                <ModalBody>
+                    <form ref={form} onSubmit={sendEmail}>
+                        <label>Name: </label>
+                        <input type="text" name="user_name" />
+                        <label>Email: </label>
+                        <input type="email" name="user_email" />
+                        <label>Message: </label>
+                        <textarea name="message" />
+                        <input type="submit" value="Send" />
+                    </form>
+                </ModalBody>
+                <ModalFooter>
+                    <Button color="primary" type="submit" onClick={sendEmail}>Send</Button>
+                </ModalFooter>
+            </Modal>
+        </>
+    )
+}
 
-    export default EmailModal
+export default EmailModal
 
     //add Toast to show email was sent successfully
-
-    // < Form ref = { form } >
-//      <Label>Name: </Label>
-//      <Input type="text" name="user_name" />
-//      <Label>Email: </Label>
-//      <Input type="email" name="user_email" />
-//      <Label>Message: </Label>
-//      <Input type="textarea" name="message" />
-    //  </ >

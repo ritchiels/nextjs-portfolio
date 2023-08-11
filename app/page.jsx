@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react'
+import { useState, useRef } from 'react'
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import Image from 'next/image'
 import ProfilePic from '../public/rich-prof.jpg'
 import EmailModal from '@/components/EmailModal'
@@ -8,7 +9,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { config } from '@fortawesome/fontawesome-svg-core'
+import emailjs from '@emailjs/browser'
 import '@fortawesome/fontawesome-svg-core/styles.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 config.autoAddCss = false;
 
 const Home = () => {
@@ -16,7 +19,27 @@ const Home = () => {
     const [showEmailModal, setShowEmailModal] = useState(false);
 
     const toggleEmailModal = () => {
+        console.log('toggling email modal');
         setShowEmailModal(!showEmailModal);
+    };
+
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm(
+            'service_4s88vzf',
+            'template_8ojz16j',
+            form.current,
+            'PKTpMx9_Hrr5oH_Ct'
+        )
+            .then((result) => {
+                console.log(result.text);
+                console.log("message sent");
+            }, (error) => {
+                console.log(error.text);
+            });
     };
 
     return (
@@ -30,17 +53,17 @@ const Home = () => {
                     className="profile-image rounded-full fade-in-pic"
                 />
                 <div className="flex flex-col">
-                    <h1 className="text-5xl font-semibold text-lapiz-lazuli fade-in-header">Ritchie Simmons</h1>
-                    <p className="text-sm font-semibold font-comfortaa text-gray-600 mt-2 ml-2 mb-4 fade-in-text">
-                        Full-stack web developer with a focus in React and MongoDB <br /> 📍 based in Florida, USA.
+                    <h1 className="text-5xl font-semibold m-auto text-lapiz-lazuli fade-in-header">Ritchie Simmons</h1>
+                    <p className="text-sm text-center font-semibold font-comfortaa text-gray-600 mt-4 ml-2 mb-4 fade-in-text">
+                        Full-stack web developer with a focus in React and MongoDB <br /> 📍 Florida, USA.
                     </p>
-                    <div className="flex space-x-8 items-center text-lapiz-lazuli fade-in-socials">
+                    <div className="flex space-x-8 items-center m-auto text-lapiz-lazuli fade-in-socials">
                         <a href="https://github.com/ritchiels" className="socials">
                             <FontAwesomeIcon icon={faGithub} size="xl" />
                         </a>
-                        <a href="#" className="socials">
-                            <FontAwesomeIcon icon={faEnvelope} size="xl" onClick={toggleEmailModal} />
-                        </a>
+                        <button className="socials" onClick={toggleEmailModal}>
+                            <FontAwesomeIcon icon={faEnvelope} size="xl" />
+                        </button>
                         <a href="https://www.linkedin.com/in/ritchie-simmons-060443231" className="socials">
                             <FontAwesomeIcon icon={faLinkedin} size="xl" />
                         </a>
@@ -48,6 +71,25 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+            <Modal isOpen={showEmailModal} toggle={toggleEmailModal}>
+                <ModalHeader toggle={toggleEmailModal}>
+                    Send me an email 📩
+                </ModalHeader>
+                <ModalBody>
+                    <form ref={form} onSubmit={sendEmail}>
+                        <label>Name: </label>
+                        <input type="text" name="user_name" />
+                        <label>Email: </label>
+                        <input type="email" name="user_email" />
+                        <label>Message: </label>
+                        <textarea name="message" />
+                        <input type="submit" value="Send" />
+                    </form>
+                </ModalBody>
+                <ModalFooter>
+                    <Button color="primary" type="submit" onClick={sendEmail}>Send</Button>
+                </ModalFooter>
+            </Modal>
         </div>
     )
 }
