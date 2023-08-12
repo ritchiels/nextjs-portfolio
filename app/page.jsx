@@ -46,6 +46,7 @@ const Home = () => {
 
     return (
         <div className="main w-full h-screen flex justify-start items-center font-poppins">
+            {/* profile */}
             <div className="mb-40 flex items-center space-x-8">
                 <Image
                     src={ProfilePic}
@@ -71,11 +72,22 @@ const Home = () => {
                         </a>
                         {showEmailModal && <EmailModal toggle={toggleEmailModal} />}
                     </div>
-                    <p className="text-sm text-center font-semibold font-comfortaa text-gray-600 mt-4 ml-2 mb-4 fade-in-text">
+                    <p className="text-lg text-center font-bold font-comfortaa text-gray-600 mt-4 ml-2 mb-4 fade-in-text">
                         Techs I enjoy using: 
                     </p>
+                    <div className="flex space-x-6 items-center m-auto fade-in-socials"> 
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" className="stack-icons"/>        
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" className="stack-icons"/>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" className="stack-icons"/>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" className="stack-icons"/>        
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" className="stack-icons"/>   
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg" className="stack-icons"/>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" className="stack-icons"/>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" className="stack-icons"/>
+                    </div>  
                 </div>
             </div>
+            {/* modal */}
             <Modal isOpen={showEmailModal} toggle={toggleEmailModal} centered>
                 <ModalHeader className="modal-header text-lapiz-lazuli font-poppins">
                     Send me an email 📩
@@ -112,5 +124,5 @@ export default Home
     //framework icons to display:
     //html, css, javascript, react, nextjs, tailwind, mongodb
 
-    //todo: add stack svg's, style modal form, close modal after sending email, toast to show email sent
+    //todo: toast to show email sent, add links to all svgs
     //todo: edit modal buttons (color, positioning), consider changing Poppins

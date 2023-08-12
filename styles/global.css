@@ -35,6 +35,26 @@
     }
 }
 
+.stack-icons {
+    height: 50px;
+    width: 50px;
+}
+
+.tailwind-icon {
+    height: 70px;
+    width: 70px;
+    display: inline;
+    margin-left: 4px;
+}
+
+.next-icon {
+    height: 35px;
+    width: 35px;
+    display: inline;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
 .modal-header {
     display: flex;
     justify-content: space-between;
