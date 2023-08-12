@@ -40,6 +40,8 @@ const Home = () => {
             }, (error) => {
                 console.log(error.text);
             });
+
+        toggleEmailModal();
     };
 
     return (
@@ -70,23 +72,24 @@ const Home = () => {
                         {showEmailModal && <EmailModal toggle={toggleEmailModal} />}
                     </div>
                     <p className="text-sm text-center font-semibold font-comfortaa text-gray-600 mt-4 ml-2 mb-4 fade-in-text">
-                        Techs I use: 
+                        Techs I enjoy using: 
                     </p>
                 </div>
             </div>
             <Modal isOpen={showEmailModal} toggle={toggleEmailModal} centered>
-                <ModalHeader className="modal-header">
+                <ModalHeader className="modal-header text-lapiz-lazuli font-poppins">
                     Send me an email 📩
                 </ModalHeader>
                 <ModalBody>
-                    <form ref={form} className="modal-form" onSubmit={sendEmail}>
+                    <form ref={form} className="modal-form font-poppins" onSubmit={sendEmail}>
                         <label>Name: </label>
-                        <input type="text" name="user_name" />
-                        <label>Email: </label>
-                        <input type="email" name="user_email" />
+                        <input type="text" name="from_name" />
+                        <label>Email Address: </label>
+                        <input type="email" name="email" />
+                        <label>Subject: </label>
+                        <input type="subject" name="subject" />
                         <label>Message: </label>
                         <textarea name="message" />
-                        <input type="submit" value="Send" />
                     </form>
                 </ModalBody>
                 <ModalFooter className="flex justify-between">
@@ -110,4 +113,4 @@ export default Home
     //html, css, javascript, react, nextjs, tailwind, mongodb
 
     //todo: add stack svg's, style modal form, close modal after sending email, toast to show email sent
-    //todo: edit modal buttons (color, positioning)
+    //todo: edit modal buttons (color, positioning), consider changing Poppins

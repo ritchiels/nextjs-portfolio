@@ -2,9 +2,9 @@
 
 const Footer = () => {
   return (
-    <footer className="w-full text-center py-1 absolute bottom-0">
+    <footer className="w-full text-center absolute bottom-0">
         <p className="text-gray-400 text-sm">
-            this site was made from scratch using Next.js and Tailwind
+            my portfolio was made from scratch using Next.js and TailwindCSS
         </p>
     </footer>
   )
