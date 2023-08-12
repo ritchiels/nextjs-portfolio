@@ -36,13 +36,13 @@
 }
 
 .stack-icons {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
 }
 
 .tailwind-icon {
-    height: 70px;
-    width: 70px;
+    height: 75px;
+    width: 75px;
     display: inline;
     margin-left: 4px;
 }
@@ -101,6 +101,54 @@
 
 .modal-form textarea {
     resize: vertical;
+}
+
+.toast-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    border-radius: 25px;
+    align-items: center;
+    z-index: 1000;
+}
+
+.toast-overlay.show {
+    display: flex;
+}
+
+.email-toast {
+    width: 300px;
+    max-width: 80%;
+    margin: 0 auto;
+    opacity: 1;
+    transition: opacity 0.5s;
+    border-radius: 25px;
+}
+
+#custom-toast {
+    border-color: #28a745; 
+    border-radius: 35px;
+}
+
+.email-toast.show {
+    opacity: 1;
+}
+
+.email-toast .toast-body {
+    color: white;
+    border-radius: 25px;
+}
+
+.email-toast.show .toast-body {
+    opacity: 1;
+}
+
+.email-toast.show .toast-body {
+    transition: opacity 0.5s, background-color 0.5s, color 0.5s;
 }
 
 @keyframes fade-in {

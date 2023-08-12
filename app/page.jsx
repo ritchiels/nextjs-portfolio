@@ -1,7 +1,7 @@
 'use client';
 
-import { useState, useRef } from 'react'
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { useEffect, useState, useRef } from 'react'
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Toast, ToastHeader, ToastBody } from 'reactstrap';
 import Image from 'next/image'
 import ProfilePic from '../public/rich-prof.jpg'
 import EmailModal from '@/components/EmailModal'
@@ -17,13 +17,28 @@ config.autoAddCss = false;
 const Home = () => {
 
     const [showEmailModal, setShowEmailModal] = useState(false);
+    const [showToast, setShowToast] = useState(false);
 
     const toggleEmailModal = () => {
         console.log('toggling email modal');
         setShowEmailModal(!showEmailModal);
     };
 
+    const toggleToast = () => {
+        setShowToast(!showToast);
+    }
+
     const form = useRef();
+
+    useEffect(() => {
+        if (showToast) {
+            const timer = setTimeout(() => {
+                toggleToast();
+            }, 3000);
+
+            return () => clearTimeout(timer);
+        }
+    }, [showToast])
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -41,13 +56,14 @@ const Home = () => {
                 console.log(error.text);
             });
 
+        toggleToast();
         toggleEmailModal();
     };
 
     return (
         <div className="main w-full h-screen flex justify-start items-center font-poppins">
             {/* profile */}
-            <div className="mb-40 flex items-center space-x-8">
+            <div className="flex items-center space-x-8">
                 <Image
                     src={ProfilePic}
                     alt="Profile Image"
@@ -72,7 +88,7 @@ const Home = () => {
                         </a>
                         {showEmailModal && <EmailModal toggle={toggleEmailModal} />}
                     </div>
-                    <p className="text-lg text-center font-bold font-comfortaa text-gray-600 mt-4 ml-2 mb-4 fade-in-text">
+                    <p className="text-lg text-center font-bold font-comfortaa text-gray-600 mt-10 ml-2 mb-4 fade-in-text">
                         Techs I enjoy using: 
                     </p>
                     <div className="flex space-x-6 items-center m-auto fade-in-socials"> 
@@ -111,6 +127,14 @@ const Home = () => {
                     <Button color="primary" type="submit" onClick={sendEmail}>Send</Button>
                 </ModalFooter>
             </Modal>
+            {/* toast */}
+            <div className={`toast-overlay ${showToast ? "show" : ""}`}>
+                <Toast isOpen={showToast} toggle={toggleToast} className="email-toast" id="custom-toast">
+                    <ToastBody className="text-center bg-success" toggle={toggleToast}>
+                        Email Sent Successfully <span className="ml-1">✔</span> <br />Thanks for reaching out 
+                    </ToastBody>
+                </Toast>
+            </div>
         </div>
     )
 }
