@@ -6,7 +6,7 @@ import Image from 'next/image'
 import ProfilePic from '../public/rich-prof.jpg'
 import EmailModal from '@/components/EmailModal'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faTimes } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import emailjs from '@emailjs/browser'
@@ -69,14 +69,17 @@ const Home = () => {
                         </a>
                         {showEmailModal && <EmailModal toggle={toggleEmailModal} />}
                     </div>
+                    <p className="text-sm text-center font-semibold font-comfortaa text-gray-600 mt-4 ml-2 mb-4 fade-in-text">
+                        Techs I use: 
+                    </p>
                 </div>
             </div>
-            <Modal isOpen={showEmailModal} toggle={toggleEmailModal}>
-                <ModalHeader toggle={toggleEmailModal}>
+            <Modal isOpen={showEmailModal} toggle={toggleEmailModal} centered>
+                <ModalHeader className="modal-header">
                     Send me an email 📩
                 </ModalHeader>
                 <ModalBody>
-                    <form ref={form} onSubmit={sendEmail}>
+                    <form ref={form} className="modal-form" onSubmit={sendEmail}>
                         <label>Name: </label>
                         <input type="text" name="user_name" />
                         <label>Email: </label>
@@ -86,7 +89,10 @@ const Home = () => {
                         <input type="submit" value="Send" />
                     </form>
                 </ModalBody>
-                <ModalFooter>
+                <ModalFooter className="flex justify-between">
+                    <Button color="" onClick={toggleEmailModal} className="text-lapiz-lazuli">
+                        Close
+                    </Button>
                     <Button color="primary" type="submit" onClick={sendEmail}>Send</Button>
                 </ModalFooter>
             </Modal>
@@ -102,3 +108,6 @@ export default Home
 
     //framework icons to display:
     //html, css, javascript, react, nextjs, tailwind, mongodb
+
+    //todo: add stack svg's, style modal form, close modal after sending email, toast to show email sent
+    //todo: edit modal buttons (color, positioning)
