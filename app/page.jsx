@@ -4,7 +4,6 @@ import { useEffect, useState, useRef } from 'react'
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Toast, ToastHeader, ToastBody } from 'reactstrap';
 import Image from 'next/image'
 import ProfilePic from '../public/rich-prof.jpg'
-import EmailModal from '@/components/EmailModal'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faTimes } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
@@ -88,21 +87,48 @@ const Home = () => {
                         </a>
                         {showEmailModal && <EmailModal toggle={toggleEmailModal} />}
                     </div>
-                    <hr />
+                    <hr className="fade-in-socials"/>
                     <p className="text-lg text-center font-bold font-comfortaa text-gray-600 mt-10 ml-2 mb-4 fade-in-text">
                         Techs I enjoy using:
                     </p>
-                    <div className="flex space-x-6 justify-center">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" className="stack-icons" />
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" className="stack-icons" />
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" className="stack-icons" />
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" className="stack-icons" />
+                    <div className="flex space-x-6 justify-center fade-in-socials">
+                        <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" for="html">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" className="stack-icons" />
+                        </a>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" for="css">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" className="stack-icons" />
+                        </a>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" for="javascript">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" className="stack-icons" />
+                        </a>
+                        <a href="https://tailwindcss.com/docs/installation" for="tailwind">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" className="stack-icons" />
+                        </a>
                     </div>
-                    <div className="flex space-x-6 mt-2 justify-center">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" className="stack-icons" />
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg" className="stack-icons" />
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" className="stack-icons" />
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" className="stack-icons" />
+                    <div className="flex space-x-6 mt-2 justify-center fade-in-socials">
+                        <a href="https://react.dev/" for="react">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" className="stack-icons" />
+                        </a>
+                        <a href="https://nextjs.org/docs" for="nextjs">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" className="stack-icons"/>
+                        </a>
+                        <a href="https://nodejs.org/en/docs" for="nodejs">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" className="stack-icons" />
+                        </a>
+                        <a href="https://www.mongodb.com/docs/" for="mongodb">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" className="stack-icons" />
+                        </a>
+                    </div>
+                    <div className="flex space-x-6 mt-2 justify-center fade-in-socials">
+                        <a href="https://mui.com/material-ui/getting-started/" for="mui">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg" className="stack-icons" />
+                        </a>
+                        <a href="https://cloud.google.com/docs" for="cloud">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" className="stack-icons"/>
+                        </a>
+                        <a href="https://www.figma.com/developers" for="figma">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" className="stack-icons"/>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -153,3 +179,4 @@ export default Home
 
     //todo: toast to show email sent, add links to all svgs
     //todo: edit modal buttons (color, positioning), consider changing Poppins
+    //todo: turn sections of code into components i.e. stack-icons, profile, etc.
