@@ -63,7 +63,7 @@ const Home = () => {
     return (
         <div className="main w-full h-screen flex justify-start items-center font-poppins">
             {/* profile */}
-            <div className="flex items-center space-x-8">
+            <div className="flex items-center space-x-8 mt-20 pr-20">
                 <Image
                     src={ProfilePic}
                     alt="Profile Image"
@@ -88,19 +88,22 @@ const Home = () => {
                         </a>
                         {showEmailModal && <EmailModal toggle={toggleEmailModal} />}
                     </div>
+                    <hr />
                     <p className="text-lg text-center font-bold font-comfortaa text-gray-600 mt-10 ml-2 mb-4 fade-in-text">
-                        Techs I enjoy using: 
+                        Techs I enjoy using:
                     </p>
-                    <div className="flex space-x-6 items-center m-auto fade-in-socials"> 
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" className="stack-icons"/>        
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" className="stack-icons"/>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" className="stack-icons"/>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" className="stack-icons"/>        
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" className="stack-icons"/>   
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg" className="stack-icons"/>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" className="stack-icons"/>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" className="stack-icons"/>
-                    </div>  
+                    <div className="flex space-x-6 justify-center">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" className="stack-icons" />
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" className="stack-icons" />
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" className="stack-icons" />
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" className="stack-icons" />
+                    </div>
+                    <div className="flex space-x-6 mt-2 justify-center">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" className="stack-icons" />
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg" className="stack-icons" />
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" className="stack-icons" />
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" className="stack-icons" />
+                    </div>
                 </div>
             </div>
             {/* modal */}
@@ -131,7 +134,7 @@ const Home = () => {
             <div className={`toast-overlay ${showToast ? "show" : ""}`}>
                 <Toast isOpen={showToast} toggle={toggleToast} className="email-toast" id="custom-toast">
                     <ToastBody className="text-center bg-success" toggle={toggleToast}>
-                        Email Sent Successfully <span className="ml-1">✔</span> <br />Thanks for reaching out 
+                        Email Sent Successfully <span className="ml-1">✔</span> <br />Thanks for reaching out
                     </ToastBody>
                 </Toast>
             </div>
