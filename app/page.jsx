@@ -65,7 +65,7 @@ const Home = () => {
     //calendar logic
 
     return (
-        <div className="main dark w-full h-screen flex justify-start items-center font-poppins">
+        <div className="main w-full h-screen flex justify-start items-center font-poppins">
             {/* profile */}
             <div className="flex items-center space-x-8 mt-20 pr-20">
                 <div className="flex flex-col">
@@ -76,16 +76,54 @@ const Home = () => {
                         width={250}
                         className="profile-image rounded-full fade-in-pic"
                     />
-                    <a href="/projects" className="fade-in-socials ml-5">
-                        <Image src={Notebook} alt="projects" height={175} width={175} />
-                    </a>
-                    <p className="projects-text text-md font-comfortaa text-semibold mb-4 fade-in-text">
-                        Check out some of my projects!
-                    </p>
+                    <div className="flex flex-col tech-stack">
+                        <p className="text-lg text-center font-bold font-comfortaa text-gray-500 mt-10 mb-4 fade-in-text">
+                            Techs I enjoy using:
+                        </p>
+                        <div className="flex space-x-6 justify-center fade-in-socials">
+                            <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" for="html">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" className="stack-icons" />
+                            </a>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" for="css">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" className="stack-icons" />
+                            </a>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" for="javascript">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" className="stack-icons" />
+                            </a>
+                            <a href="https://tailwindcss.com/docs/installation" for="tailwind">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" className="stack-icons" />
+                            </a>
+                        </div>
+                        <div className="flex space-x-6 mt-2 justify-center fade-in-socials">
+                            <a href="https://react.dev/" for="react">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" className="stack-icons" />
+                            </a>
+                            <a href="https://nextjs.org/docs" for="nextjs">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" className="stack-icons"/>
+                            </a>
+                            <a href="https://nodejs.org/en/docs" for="nodejs">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" className="stack-icons" />
+                            </a>
+                            <a href="https://www.mongodb.com/docs/" for="mongodb">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" className="stack-icons" />
+                            </a>
+                        </div>
+                        <div className="flex space-x-6 mt-2 justify-center fade-in-socials">
+                            <a href="https://mui.com/material-ui/getting-started/" for="mui">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg" className="stack-icons" />
+                            </a>
+                            <a href="https://cloud.google.com/docs" for="cloud">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" className="stack-icons"/>
+                            </a>
+                            <a href="https://www.figma.com/developers" for="figma">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" className="stack-icons"/>
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 <div className="flex flex-col">
                     <h1 className="text-5xl font-semibold m-auto text-lapiz-lazuli fade-in-header">Ritchie Simmons</h1>
-                    <p className="text-sm text-center font-semibold font-comfortaa text-gray-600 mt-4 ml-2 mb-4 fade-in-text">
+                    <p className="text-sm text-center font-semibold font-comfortaa text-gray-500 mt-4 ml-2 mb-4 fade-in-text">
                         Full-stack web developer with a focus in React and MongoDB <br /> 📍 Florida, USA.
                     </p>
                     <div className="flex space-x-8 items-center m-auto text-lapiz-lazuli fade-in-socials">
@@ -101,47 +139,13 @@ const Home = () => {
                         {showEmailModal && <EmailModal toggle={toggleEmailModal} />}
                     </div>
                     <hr className="fade-in-socials"/>
-                    <p className="text-lg text-center font-bold font-comfortaa text-gray-600 mt-10 ml-2 mb-4 fade-in-text">
-                        Techs I enjoy using:
-                    </p>
-                    <div className="flex space-x-6 justify-center fade-in-socials">
-                        <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" for="html">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" className="stack-icons" />
+                    <div className="flex flex-col items-center">
+                        <a href="/projects" className="fade-in-socials">
+                            <Image src={Notebook} alt="projects" height={175} width={175} />
                         </a>
-                        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" for="css">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" className="stack-icons" />
-                        </a>
-                        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" for="javascript">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" className="stack-icons" />
-                        </a>
-                        <a href="https://tailwindcss.com/docs/installation" for="tailwind">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" className="stack-icons" />
-                        </a>
-                    </div>
-                    <div className="flex space-x-6 mt-2 justify-center fade-in-socials">
-                        <a href="https://react.dev/" for="react">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" className="stack-icons" />
-                        </a>
-                        <a href="https://nextjs.org/docs" for="nextjs">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" className="stack-icons"/>
-                        </a>
-                        <a href="https://nodejs.org/en/docs" for="nodejs">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" className="stack-icons" />
-                        </a>
-                        <a href="https://www.mongodb.com/docs/" for="mongodb">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" className="stack-icons" />
-                        </a>
-                    </div>
-                    <div className="flex space-x-6 mt-2 justify-center fade-in-socials">
-                        <a href="https://mui.com/material-ui/getting-started/" for="mui">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg" className="stack-icons" />
-                        </a>
-                        <a href="https://cloud.google.com/docs" for="cloud">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" className="stack-icons"/>
-                        </a>
-                        <a href="https://www.figma.com/developers" for="figma">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" className="stack-icons"/>
-                        </a>
+                        <p className="projects-text text-md font-comfortaa font-semibold mb-4 text-gray-500 fade-in-text">
+                            Check out some of my projects!
+                        </p>
                     </div>
                 </div>
             </div>
