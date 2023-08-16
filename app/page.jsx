@@ -4,20 +4,24 @@ import { useEffect, useState, useRef } from 'react'
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Toast, ToastHeader, ToastBody } from 'reactstrap';
 import Image from 'next/image'
 import ProfilePic from '../public/rich-prof.jpg'
+import EmailModal from '@/components/EmailModal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faTimes } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faMoon } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import emailjs from '@emailjs/browser'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-config.autoAddCss = false;
+import Notebook from '../img/notebook_S.png'
+config.autoAddCss = false
+
+
 
 const Home = () => {
-
+    // state
     const [showEmailModal, setShowEmailModal] = useState(false);
     const [showToast, setShowToast] = useState(false);
-
+    // email logic
     const toggleEmailModal = () => {
         console.log('toggling email modal');
         setShowEmailModal(!showEmailModal);
@@ -58,18 +62,27 @@ const Home = () => {
         toggleToast();
         toggleEmailModal();
     };
+    //calendar logic
 
     return (
-        <div className="main w-full h-screen flex justify-start items-center font-poppins">
+        <div className="main dark w-full h-screen flex justify-start items-center font-poppins">
             {/* profile */}
             <div className="flex items-center space-x-8 mt-20 pr-20">
-                <Image
-                    src={ProfilePic}
-                    alt="Profile Image"
-                    height={250}
-                    width={250}
-                    className="profile-image rounded-full fade-in-pic"
-                />
+                <div className="flex flex-col">
+                    <Image
+                        src={ProfilePic}
+                        alt="Profile Image"
+                        height={250}
+                        width={250}
+                        className="profile-image rounded-full fade-in-pic"
+                    />
+                    <a href="/projects" className="fade-in-socials ml-5">
+                        <Image src={Notebook} alt="projects" height={175} width={175} />
+                    </a>
+                    <p className="projects-text text-md font-comfortaa text-semibold mb-4 fade-in-text">
+                        Check out some of my projects!
+                    </p>
+                </div>
                 <div className="flex flex-col">
                     <h1 className="text-5xl font-semibold m-auto text-lapiz-lazuli fade-in-header">Ritchie Simmons</h1>
                     <p className="text-sm text-center font-semibold font-comfortaa text-gray-600 mt-4 ml-2 mb-4 fade-in-text">
@@ -173,10 +186,6 @@ export default Home
     // empty div to help with spacing:
 
     // <div style={{ width: '5rem' }}></div>
-
-    //framework icons to display:
-    //html, css, javascript, react, nextjs, tailwind, mongodb
-
-    //todo: toast to show email sent, add links to all svgs
+    //todo: add 'projects' button linking to 'projects' page
     //todo: edit modal buttons (color, positioning), consider changing Poppins
     //todo: turn sections of code into components i.e. stack-icons, profile, etc.
