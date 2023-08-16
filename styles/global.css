@@ -7,9 +7,11 @@
 
 .main {
     width: 100vw;
-    min-height: 100vh;
+    height: 100vh;
     position: fixed;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     padding: 120px 24px 160px 24px;
 }
@@ -36,6 +38,7 @@
 
 .projects-text {
     margin-top: -1rem;
+    text-align: center;
 }
 
 .socials {
@@ -192,8 +195,12 @@
 }
 
 /*mobile*/
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .modal-form {
         max-width: 100%;
     }
+    .main {
+        justify-content: start;
+    }
 }
+

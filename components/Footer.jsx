@@ -3,7 +3,7 @@
 const Footer = () => {
     
   return (
-    <footer className="w-full text-center absolute bottom-0 fade-in-pic">
+    <footer className="hidden md:block w-full text-center absolute bottom-0 fade-in-pic">
         <span className="text-gray-400 text-sm">
             I built my portfolio from scratch using
             <a href="https://nextjs.org/docs" for="nextjs">
