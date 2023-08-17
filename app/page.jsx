@@ -13,6 +13,7 @@ import emailjs from '@emailjs/browser'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Notebook from '../img/notebook_S.png'
+import Tea from '../img/tea_S.png'
 config.autoAddCss = false
 
 
@@ -99,7 +100,7 @@ const Home = () => {
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" className="stack-icons" />
                             </a>
                             <a href="https://nextjs.org/docs" for="nextjs">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" className="stack-icons"/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" className="stack-icons" />
                             </a>
                             <a href="https://nodejs.org/en/docs" for="nodejs">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" className="stack-icons" />
@@ -113,84 +114,86 @@ const Home = () => {
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg" className="stack-icons" />
                             </a>
                             <a href="https://cloud.google.com/docs" for="cloud">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" className="stack-icons"/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" className="stack-icons" />
                             </a>
                             <a href="https://www.figma.com/developers" for="figma">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" className="stack-icons"/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" className="stack-icons" />
                             </a>
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col">
+                <div className="flex flex-col md:mt-10">
                     <h1 className="text-4xl md:text-5xl font-semibold m-auto mt-4 text-lapiz-lazuli fade-in-header">Ritchie Simmons</h1>
                     <p className="text-lg md:text-sm text-center font-bold font-comfortaa text-gray-500 mt-4 ml-2 mb-4 fade-in-text">
                         Full-stack React developer
                     </p>
-                    <p className="text-md md:text-sm text-center font-semibold font-comfortaa text-gray-500 mt-4 ml-2 mb-4 fade-in-text">
+                    <p className="text-md md:text-sm text-center font-semibold font-comfortaa text-gray-500 mt-2 ml-2 mb-4 fade-in-text">
                         📍 Florida, USA.
                     </p>
                     <div className="flex space-x-16 md:space-x-14 items-center m-auto mt-2 mb-4 text-lapiz-lazuli fade-in-socials">
                         <a href="https://github.com/ritchiels" className="socials">
-                            <FontAwesomeIcon icon={faGithub} size="xl" />
+                            <FontAwesomeIcon icon={faGithub} size="2xl" />
                         </a>
                         <button className="socials" onClick={toggleEmailModal}>
-                            <FontAwesomeIcon icon={faEnvelope} size="xl" />
+                            <FontAwesomeIcon icon={faEnvelope} size="2xl" />
                         </button>
                         <a href="https://www.linkedin.com/in/ritchie-simmons-060443231" className="socials">
-                            <FontAwesomeIcon icon={faLinkedin} size="xl" />
+                            <FontAwesomeIcon icon={faLinkedin} size="2xl" />
                         </a>
                         {showEmailModal && <EmailModal toggle={toggleEmailModal} />}
                     </div>
-                    <hr className="fade-in-socials"/>
-                    <div className="flex flex-col items-center">
-                        <a href="/projects" className="fade-in-socials">
-                            <Image src={Notebook} alt="projects" height={175} width={175} />
-                        </a>
-                        <p className="projects-text text-sm md:text-md font-comfortaa font-semibold mb-4 text-gray-500 fade-in-text">
+                    <hr className="fade-in-socials" />
+                    <div className="md:grid md:grid-cols-2 flex flex-col items-center">
+                        <p className="projects-text text-sm md:text-md font-comfortaa font-semibold mt-4 text-gray-500 fade-in-text">
                             Click or tap the notebook <br /> to check out some of my projects!
                         </p>
+                        <p className="projects-text text-sm md:text-md font-comfortaa font-semibold mt-4 text-gray-500 fade-in-text">
+                            ...or the mug to see <br /> some of my accolades
+                        </p>
+                        <a href="/projects" className="fade-in-socials">
+                            <Image src={Notebook} className="md:m-auto" alt="projects" height={175} width={175} />
+                        </a>
+                        <a href="/accolades" className="fade-in-socials">
+                            <Image src={Tea} className="ml-10 md:ml-12" alt="accolades" height={175} width={175} />
+                        </a>
                     </div>
                     <div className="flex flex-col md:hidden tech-stack">
                         <p className="text-2xl md:text-lg text-center font-bold font-comfortaa text-gray-500 mt-10 mb-10 md:mb-4 fade-in-text">
                             Techs I enjoy using:
                         </p>
-                        <div className="flex space-x-6 justify-center fade-in-socials">
+                        <div className="grid grid-cols-3 gap-6 m-auto justify-center fade-in-socials">
                             <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" for="html">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" className="stack-icons" />
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" className="mobile-stack-icons" />
                             </a>
                             <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" for="css">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" className="stack-icons" />
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" className="mobile-stack-icons" />
                             </a>
                             <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" for="javascript">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" className="stack-icons" />
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" className="mobile-stack-icons" />
                             </a>
                             <a href="https://tailwindcss.com/docs/installation" for="tailwind">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" className="stack-icons" />
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" className="mobile-stack-icons" />
                             </a>
-                        </div>
-                        <div className="flex space-x-6 mt-2 justify-center fade-in-socials">
                             <a href="https://react.dev/" for="react">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" className="stack-icons" />
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" className="mobile-stack-icons" />
                             </a>
                             <a href="https://nextjs.org/docs" for="nextjs">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" className="stack-icons"/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" className="mobile-stack-icons" />
                             </a>
                             <a href="https://nodejs.org/en/docs" for="nodejs">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" className="stack-icons" />
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" className="mobile-stack-icons" />
                             </a>
                             <a href="https://www.mongodb.com/docs/" for="mongodb">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" className="stack-icons" />
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" className="mobile-stack-icons" />
                             </a>
-                        </div>
-                        <div className="flex space-x-6 mt-2 justify-center fade-in-socials">
                             <a href="https://mui.com/material-ui/getting-started/" for="mui">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg" className="stack-icons" />
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg" className="mobile-stack-icons" />
                             </a>
                             <a href="https://cloud.google.com/docs" for="cloud">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" className="stack-icons"/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" className="mobile-stack-icons" />
                             </a>
                             <a href="https://www.figma.com/developers" for="figma">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" className="stack-icons"/>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" className="mobile-stack-icons" />
                             </a>
                         </div>
                     </div>
