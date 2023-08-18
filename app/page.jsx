@@ -124,13 +124,13 @@ const Home = () => {
                 </div>
                 <div className="flex flex-col md:mt-10">
                     <h1 className="text-4xl md:text-5xl font-semibold m-auto mt-4 text-lapiz-lazuli fade-in-header">Ritchie Simmons</h1>
-                    <p className="text-lg md:text-sm text-center font-bold font-comfortaa text-gray-500 mt-4 ml-2 mb-4 fade-in-text">
+                    <p className="text-lg md:text-md text-center font-bold font-comfortaa text-gray-500 mt-4 ml-2 mb-2 fade-in-text">
                         Full-stack React developer
                     </p>
                     <p className="text-md md:text-sm text-center font-semibold font-comfortaa text-gray-500 mt-2 ml-2 mb-4 fade-in-text">
                         📍 Florida, USA.
                     </p>
-                    <div className="flex space-x-16 md:space-x-14 items-center m-auto mt-2 mb-4 text-lapiz-lazuli fade-in-socials">
+                    <div className="flex space-x-16 md:space-x-14 items-center m-auto mt-2 mb-2 text-lapiz-lazuli fade-in-socials">
                         <a href="https://github.com/ritchiels" className="socials">
                             <FontAwesomeIcon icon={faGithub} size="2xl" />
                         </a>
@@ -238,9 +238,9 @@ const Home = () => {
 export default Home
 
     // empty div to help with spacing:
-
     // <div style={{ width: '5rem' }}></div>
-    //todo: add 'projects' button linking to 'projects' page
+
+    //todo: fill out 'projects' page
     //todo: edit modal buttons (color, positioning), consider changing Poppins
     //todo: turn sections of code into components i.e. stack-icons, profile, etc.
     //todo: add accolades page with certifs and badges, link to it on homepage with svg
