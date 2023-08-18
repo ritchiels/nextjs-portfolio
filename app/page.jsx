@@ -5,6 +5,7 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Toast, ToastHeader,
 import Image from 'next/image'
 import ProfilePic from '../public/rich-prof.jpg'
 import EmailModal from '@/components/EmailModal';
+import { useMediaQuery } from '@react-hook/media-query';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faMoon } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
@@ -63,7 +64,8 @@ const Home = () => {
         toggleToast();
         toggleEmailModal();
     };
-    //calendar logic
+    //media query logic
+    const isMediumScreen = useMediaQuery('(min-width: 768px)');
 
     return (
         <div className="main flex flex-col justify-center items-center font-poppins overflow-y-auto">
@@ -124,24 +126,24 @@ const Home = () => {
                 </div>
                 <div className="flex flex-col md:mt-10">
                     <h1 className="text-4xl md:text-5xl font-semibold m-auto mt-4 text-lapiz-lazuli fade-in-header">Ritchie Simmons</h1>
+                    <div className="flex space-x-16 md:space-x-14 items-center m-auto mt-4 mb-2 text-lapiz-lazuli fade-in-socials">
+                        <a href="https://github.com/ritchiels" className="socials">
+                            <FontAwesomeIcon icon={faGithub} size={isMediumScreen ? 'xl' : '2xl'} />
+                        </a>
+                        <button className="socials" onClick={toggleEmailModal}>
+                            <FontAwesomeIcon icon={faEnvelope} size={isMediumScreen ? 'xl' : '2xl'} />
+                        </button>
+                        <a href="https://www.linkedin.com/in/ritchie-simmons-060443231" className="socials">
+                            <FontAwesomeIcon icon={faLinkedin} size={isMediumScreen ? 'xl' : '2xl'} />
+                        </a>
+                        {showEmailModal && <EmailModal toggle={toggleEmailModal} />}
+                    </div>
                     <p className="text-lg md:text-md text-center font-bold font-comfortaa text-gray-500 mt-4 ml-2 mb-2 fade-in-text">
                         Full-stack React developer
                     </p>
                     <p className="text-md md:text-sm text-center font-semibold font-comfortaa text-gray-500 mt-2 ml-2 mb-4 fade-in-text">
                         📍 Florida, USA.
                     </p>
-                    <div className="flex space-x-16 md:space-x-14 items-center m-auto mt-2 mb-2 text-lapiz-lazuli fade-in-socials">
-                        <a href="https://github.com/ritchiels" className="socials">
-                            <FontAwesomeIcon icon={faGithub} size="2xl" />
-                        </a>
-                        <button className="socials" onClick={toggleEmailModal}>
-                            <FontAwesomeIcon icon={faEnvelope} size="2xl" />
-                        </button>
-                        <a href="https://www.linkedin.com/in/ritchie-simmons-060443231" className="socials">
-                            <FontAwesomeIcon icon={faLinkedin} size="2xl" />
-                        </a>
-                        {showEmailModal && <EmailModal toggle={toggleEmailModal} />}
-                    </div>
                     <hr className="fade-in-socials" />
                     <div className="md:grid md:grid-cols-2 flex flex-col items-center">
                         <p className="projects-text text-sm md:text-md font-comfortaa font-semibold mt-4 text-gray-500 fade-in-text">
@@ -156,7 +158,7 @@ const Home = () => {
                         <a href="/accolades" className="fade-in-socials">
                             <Image src={Tea} className="ml-10 md:ml-12" alt="accolades" height={175} width={175} />
                         </a>
-                    </div>
+                    </div>    
                     <div className="flex flex-col md:hidden tech-stack">
                         <p className="text-2xl md:text-lg text-center font-bold font-comfortaa text-gray-500 mt-10 mb-10 md:mb-4 fade-in-text">
                             Techs I enjoy using:
