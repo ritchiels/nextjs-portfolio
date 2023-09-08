@@ -22,7 +22,8 @@ module.exports = {
       },
       fontFamily: {
         comfortaa: ['Comfortaa', 'cursive'],
-        poppins: ['Poppins', 'sans-serif']
+        poppins: ['Poppins', 'sans-serif'],
+        robotoslab: ['Roboto Slab', 'serif']
       }
     },
   },
