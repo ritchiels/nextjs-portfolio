@@ -23,7 +23,8 @@ module.exports = {
       fontFamily: {
         comfortaa: ['Comfortaa', 'cursive'],
         poppins: ['Poppins', 'sans-serif'],
-        robotoslab: ['Roboto Slab', 'serif']
+        robotoslab: ['Roboto Slab', 'serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
       }
     },
   },
