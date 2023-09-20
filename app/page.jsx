@@ -70,132 +70,134 @@ const Home = () => {
     const isMediumScreen = useMediaQuery('(min-width: 768px)');
 
     return (
-        <div className="main flex flex-col justify-center items-center overflow-y-auto">
-            {/* profile */}
-            <div className="grid grid-col md:flex items-center md:space-x-8">
-                <div>
+        <>
+            <div className="main flex flex-col justify-center items-center overflow-y-auto">
+                {/* profile */}
+                <div className="grid grid-col md:flex items-center md:space-x-8">
+                    <div>
+                        <Image
+                            src={ProfilePic}
+                            alt="Profile Image"
+                            height={250}
+                            width={250}
+                            className="profile-image m-auto rounded-full fade-in-pic"
+                        />
+                    </div>
+                    <div className="flex flex-col md:mt-10">
+                        {/* <h2 className="text-3xl font-semibold font-montserrat text-center m-auto text-lapiz-lazuli">Hey 👋 I'm</h2> */}
+                        <h1 className="text-4xl md:text-5xl font-semibold font-montserrat m-auto mt-2 text-lapiz-lazuli fade-in-header">Ritchie Simmons</h1>
+                        <div className="flex space-x-16 md:space-x-14 items-center m-auto mt-4 mb-2 text-lapiz-lazuli fade-in-socials">
+                            <a href="https://github.com/ritchiels" className="socials">
+                                <FontAwesomeIcon icon={faGithub} size={isMediumScreen ? 'xl' : '2xl'} />
+                            </a>
+                            <button className="socials" onClick={toggleEmailModal}>
+                                <FontAwesomeIcon icon={faEnvelope} size={isMediumScreen ? 'xl' : '2xl'} />
+                            </button>
+                            <a href="https://www.linkedin.com/in/ritchie-simmons-060443231" className="socials">
+                                <FontAwesomeIcon icon={faLinkedin} size={isMediumScreen ? 'xl' : '2xl'} />
+                            </a>
+                            {showEmailModal && <EmailModal toggle={toggleEmailModal} />}
+                        </div>
+                        <p className="text-lg md:text-md text-center font-bold font-comfortaa text-gray-500 mt-4 ml-2 mb-2 fade-in-text">
+                            Full-stack React developer
+                        </p>
+                        <p className="text-md md:text-sm text-center font-semibold font-comfortaa text-gray-500 mt-2 ml-2 mb-4 fade-in-text">
+                            📍 Florida, USA
+                        </p>
+                    </div>
+                </div>
+                <div className="mt-4">
+                    <hr className="fade-in-socials" />
+                    <div className="flex flex-col">
+                        <p className="text-2xl md:text-sm text-center font-bold font-comfortaa text-gray-500 mt-2 mb-10 md:mb-4 fade-in-text">
+                            Techs I enjoy using:
+                        </p>
+                        <div className="grid grid-cols-3 gap-6 m-auto mb-4 md:flex justify-center fade-in-socials">
+                            <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" for="html">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" className="mobile-stack-icons" />
+                            </a>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" for="css">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" className="mobile-stack-icons" />
+                            </a>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" for="javascript">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" className="mobile-stack-icons" />
+                            </a>
+                            <a href="https://tailwindcss.com/docs/installation" for="tailwind">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" className="mobile-stack-icons" />
+                            </a>
+                            <a href="https://react.dev/" for="react">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" className="mobile-stack-icons" />
+                            </a>
+                            <a href="https://nextjs.org/docs" for="nextjs">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" className="mobile-stack-icons" />
+                            </a>
+                            <a href="https://nodejs.org/en/docs" for="nodejs">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" className="mobile-stack-icons" />
+                            </a>
+                            <a href="https://www.mongodb.com/docs/" for="mongodb">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" className="mobile-stack-icons" />
+                            </a>
+                            <a href="https://mui.com/material-ui/getting-started/" for="mui">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg" className="mobile-stack-icons" />
+                            </a>
+                            <a href="https://cloud.google.com/docs" for="cloud">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" className="mobile-stack-icons" />
+                            </a>
+                            <a href="https://www.figma.com/developers" for="figma">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" className="mobile-stack-icons" />
+                            </a>
+                        </div>
+                    </div>
+                    <hr className="fade-in-socials" />
+                </div>
+                <p className="pt-16 pb-16 font-montserrat font-medium text-lapiz-lazuli fade-in-text">Check out my <a href="/accolades" className="accolades">accolades</a> or scroll to see some of my recent projects</p>
+                <div className="flex flex-row items-center relative m-auto mt-40">
                     <Image
-                        src={ProfilePic}
-                        alt="Profile Image"
-                        height={250}
-                        width={250}
-                        className="profile-image m-auto rounded-full fade-in-pic"
+                        src={DevBotPic}
+                        alt="Dev Bot Pic"
+                        height={350}
+                        width={350}
+                        className="rounded-lg"
                     />
-                </div>
-                <div className="flex flex-col md:mt-10">
-                    {/* <h2 className="text-3xl font-semibold font-montserrat text-center m-auto text-lapiz-lazuli">Hey 👋 I'm</h2> */}
-                    <h1 className="text-4xl md:text-5xl font-semibold font-montserrat m-auto mt-2 text-lapiz-lazuli fade-in-header">Ritchie Simmons</h1>
-                    <div className="flex space-x-16 md:space-x-14 items-center m-auto mt-4 mb-2 text-lapiz-lazuli fade-in-socials">
-                        <a href="https://github.com/ritchiels" className="socials">
-                            <FontAwesomeIcon icon={faGithub} size={isMediumScreen ? 'xl' : '2xl'} />
-                        </a>
-                        <button className="socials" onClick={toggleEmailModal}>
-                            <FontAwesomeIcon icon={faEnvelope} size={isMediumScreen ? 'xl' : '2xl'} />
-                        </button>
-                        <a href="https://www.linkedin.com/in/ritchie-simmons-060443231" className="socials">
-                            <FontAwesomeIcon icon={faLinkedin} size={isMediumScreen ? 'xl' : '2xl'} />
-                        </a>
-                        {showEmailModal && <EmailModal toggle={toggleEmailModal} />}
-                    </div>
-                    <p className="text-lg md:text-md text-center font-bold font-comfortaa text-gray-500 mt-4 ml-2 mb-2 fade-in-text">
-                        Full-stack React developer
-                    </p>
-                    <p className="text-md md:text-sm text-center font-semibold font-comfortaa text-gray-500 mt-2 ml-2 mb-4 fade-in-text">
-                        📍 Florida, USA
-                    </p>
-                </div>
-            </div>
-            <div className="mt-4">
-                <hr className="fade-in-socials" />
-                <div className="flex flex-col">
-                    <p className="text-2xl md:text-sm text-center font-bold font-comfortaa text-gray-500 mt-2 mb-10 md:mb-4 fade-in-text">
-                        Techs I enjoy using:
-                    </p>
-                    <div className="grid grid-cols-3 gap-6 m-auto mb-4 md:flex justify-center fade-in-socials">
-                        <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" for="html">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" className="mobile-stack-icons" />
-                        </a>
-                        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" for="css">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" className="mobile-stack-icons" />
-                        </a>
-                        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" for="javascript">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" className="mobile-stack-icons" />
-                        </a>
-                        <a href="https://tailwindcss.com/docs/installation" for="tailwind">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" className="mobile-stack-icons" />
-                        </a>
-                        <a href="https://react.dev/" for="react">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" className="mobile-stack-icons" />
-                        </a>
-                        <a href="https://nextjs.org/docs" for="nextjs">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" className="mobile-stack-icons" />
-                        </a>
-                        <a href="https://nodejs.org/en/docs" for="nodejs">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" className="mobile-stack-icons" />
-                        </a>
-                        <a href="https://www.mongodb.com/docs/" for="mongodb">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" className="mobile-stack-icons" />
-                        </a>
-                        <a href="https://mui.com/material-ui/getting-started/" for="mui">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg" className="mobile-stack-icons" />
-                        </a>
-                        <a href="https://cloud.google.com/docs" for="cloud">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" className="mobile-stack-icons" />
-                        </a>
-                        <a href="https://www.figma.com/developers" for="figma">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" className="mobile-stack-icons" />
-                        </a>
+                    <div className="flex flex-col items-center pl-20">
+                        <h2 className="text-lapiz-lazuli text-xl font-montserrat font-medium">Dev Bot</h2>
+                        <p className="text-gray-600 text-sm font-comfortaa w-60 text-center">a chat bot made with JavaScript and Vite using OpenAI's api to utilize their gpt-3.5-turbo model</p>
                     </div>
                 </div>
-                <hr className="fade-in-socials" />
-            </div>
-            <p className="pt-16 font-montserrat font-medium text-lapiz-lazuli fade-in-text">Check out my <a href="/accolades">accolades</a> or scroll to see some of my recent projects</p>
-            <div className="flex flex-row m-auto items-center">
-                <Image
-                    src={DevBotPic}
-                    alt="Dev Bot Pic"
-                    height={350}
-                    width={350}
-                    className="rounded-lg"
-                />
-                <div className="flex flex-col items-center pl-20">
-                    <h2 className="text-lapiz-lazuli text-xl font-montserrat font-medium">Dev Bot</h2>
-                    <p className="text-gray-600 text-sm font-comfortaa w-60 text-center">a chat bot made with JavaScript and Vite using OpenAI's api to utilize their gpt-3.5-turbo model</p>
+                {/* modal */}
+                <Modal isOpen={showEmailModal} toggle={toggleEmailModal} centered>
+                    <ModalHeader className="modal-header text-lapiz-lazuli font-poppins">
+                        Send me an email 📩
+                    </ModalHeader>
+                    <ModalBody>
+                        <form ref={form} className="modal-form font-poppins" onSubmit={sendEmail}>
+                            <label>Name: </label>
+                            <input type="text" name="from_name" />
+                            <label>Email Address: </label>
+                            <input type="email" name="email" />
+                            <label>Subject: </label>
+                            <input type="subject" name="subject" />
+                            <label>Message: </label>
+                            <textarea name="message" />
+                        </form>
+                    </ModalBody>
+                    <ModalFooter className="flex justify-between">
+                        <Button color="" onClick={toggleEmailModal} className="text-lapiz-lazuli">
+                            Close
+                        </Button>
+                        <Button color="primary" type="submit" onClick={sendEmail}>Send</Button>
+                    </ModalFooter>
+                </Modal>
+                {/* toast */}
+                <div className={`toast-overlay ${showToast ? "show" : ""}`}>
+                    <Toast isOpen={showToast} toggle={toggleToast} className="email-toast" id="custom-toast">
+                        <ToastBody className="text-center bg-success" toggle={toggleToast}>
+                            Email Sent Successfully <span className="ml-1">✔</span> <br />Thanks for reaching out
+                        </ToastBody>
+                    </Toast>
                 </div>
             </div>
-            {/* modal */}
-            <Modal isOpen={showEmailModal} toggle={toggleEmailModal} centered>
-                <ModalHeader className="modal-header text-lapiz-lazuli font-poppins">
-                    Send me an email 📩
-                </ModalHeader>
-                <ModalBody>
-                    <form ref={form} className="modal-form font-poppins" onSubmit={sendEmail}>
-                        <label>Name: </label>
-                        <input type="text" name="from_name" />
-                        <label>Email Address: </label>
-                        <input type="email" name="email" />
-                        <label>Subject: </label>
-                        <input type="subject" name="subject" />
-                        <label>Message: </label>
-                        <textarea name="message" />
-                    </form>
-                </ModalBody>
-                <ModalFooter className="flex justify-between">
-                    <Button color="" onClick={toggleEmailModal} className="text-lapiz-lazuli">
-                        Close
-                    </Button>
-                    <Button color="primary" type="submit" onClick={sendEmail}>Send</Button>
-                </ModalFooter>
-            </Modal>
-            {/* toast */}
-            <div className={`toast-overlay ${showToast ? "show" : ""}`}>
-                <Toast isOpen={showToast} toggle={toggleToast} className="email-toast" id="custom-toast">
-                    <ToastBody className="text-center bg-success" toggle={toggleToast}>
-                        Email Sent Successfully <span className="ml-1">✔</span> <br />Thanks for reaching out
-                    </ToastBody>
-                </Toast>
-            </div>
-        </div>
+        </>
     )
 }
 

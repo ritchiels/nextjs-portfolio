@@ -9,7 +9,7 @@
 
 .main {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -41,7 +41,8 @@ h1 {
     letter-spacing: 3px;
 }
 
-a {
+.accolades {
+    color: #93B7BE;
     text-decoration: none;
 }
 
