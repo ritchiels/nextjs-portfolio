@@ -9,7 +9,8 @@
 
 .main {
     width: 100vw;
-    height: 100%;
+    height: 100vh;
+    overflow-y: auto;
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -21,6 +22,19 @@
 [data-theme="dark"] body{
     background-color: #1F487E;
     color: #F1EDEE;
+}
+
+.container {
+    padding-top: 200px;
+}
+
+.projects {
+    padding-top: 12rem;
+    padding-bottom: 10rem;
+}
+
+.scroll {
+    padding-top: 7.5rem;
 }
 
 .profile-image {
@@ -40,6 +54,7 @@
 h1 {
     letter-spacing: 3px;
 }
+
 
 .accolades {
     color: #93B7BE;

@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState, useRef } from 'react'
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Toast, ToastHeader, ToastBody } from 'reactstrap';
+import { Button, Container, Modal, ModalHeader, ModalBody, ModalFooter, Toast, ToastHeader, ToastBody } from 'reactstrap';
 import Image from 'next/image'
 import ProfilePic from '../public/rich-prof.jpg'
 import EmailModal from '@/components/EmailModal';
@@ -71,9 +71,9 @@ const Home = () => {
 
     return (
         <>
-            <div className="main flex flex-col justify-center items-center overflow-y-auto">
+            <Container className="container flex flex-col justify-center items-center overflow-y-auto">
                 {/* profile */}
-                <div className="grid grid-col md:flex items-center md:space-x-8">
+                <section className="grid grid-col md:flex items-center md:space-x-8">
                     <div>
                         <Image
                             src={ProfilePic}
@@ -85,7 +85,7 @@ const Home = () => {
                     </div>
                     <div className="flex flex-col md:mt-10">
                         {/* <h2 className="text-3xl font-semibold font-montserrat text-center m-auto text-lapiz-lazuli">Hey 👋 I'm</h2> */}
-                        <h1 className="text-4xl md:text-5xl font-semibold font-montserrat m-auto mt-2 text-lapiz-lazuli fade-in-header">Ritchie Simmons</h1>
+                        <h1 className="text-4xl md:text-4xl font-bold font-poppins m-auto mt-2 text-lapiz-lazuli fade-in-header">Ritchie Simmons</h1>
                         <div className="flex space-x-16 md:space-x-14 items-center m-auto mt-4 mb-2 text-lapiz-lazuli fade-in-socials">
                             <a href="https://github.com/ritchiels" className="socials">
                                 <FontAwesomeIcon icon={faGithub} size={isMediumScreen ? 'xl' : '2xl'} />
@@ -105,8 +105,8 @@ const Home = () => {
                             📍 Florida, USA
                         </p>
                     </div>
-                </div>
-                <div className="mt-4">
+                </section>
+                <section className="mt-4">
                     <hr className="fade-in-socials" />
                     <div className="flex flex-col">
                         <p className="text-2xl md:text-sm text-center font-bold font-comfortaa text-gray-500 mt-2 mb-10 md:mb-4 fade-in-text">
@@ -149,9 +149,9 @@ const Home = () => {
                         </div>
                     </div>
                     <hr className="fade-in-socials" />
-                </div>
-                <p className="pt-16 pb-16 font-montserrat font-medium text-lapiz-lazuli fade-in-text">Check out my <a href="/accolades" className="accolades">accolades</a> or scroll to see some of my recent projects</p>
-                <div className="flex flex-row items-center relative m-auto mt-40">
+                </section>
+                <p className="scroll font-montserrat font-medium text-lapiz-lazuli fade-in-text">Check out my <a href="/accolades" className="accolades">accolades</a> or scroll to see some of my recent projects</p>
+                <section className="projects flex flex-row items-center relative m-auto mt-40">
                     <Image
                         src={DevBotPic}
                         alt="Dev Bot Pic"
@@ -163,7 +163,7 @@ const Home = () => {
                         <h2 className="text-lapiz-lazuli text-xl font-montserrat font-medium">Dev Bot</h2>
                         <p className="text-gray-600 text-sm font-comfortaa w-60 text-center">a chat bot made with JavaScript and Vite using OpenAI's api to utilize their gpt-3.5-turbo model</p>
                     </div>
-                </div>
+                </section>
                 {/* modal */}
                 <Modal isOpen={showEmailModal} toggle={toggleEmailModal} centered>
                     <ModalHeader className="modal-header text-lapiz-lazuli font-poppins">
@@ -196,7 +196,7 @@ const Home = () => {
                         </ToastBody>
                     </Toast>
                 </div>
-            </div>
+            </Container>
         </>
     )
 }
