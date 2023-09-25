@@ -83,14 +83,19 @@ h1 {
     }
 }
 
-.stack-icons {
+/* .stack-icons {
     height: 40px;
     width: 40px;
-}
+} */
 
 .mobile-stack-icons {
     height: 40px;
     width: 40px;
+}
+
+.project-stack-icons {
+    height: 30px;
+    width: 30px;
 }
 
 .tailwind-icon {

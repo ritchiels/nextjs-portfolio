@@ -113,37 +113,37 @@ const Home = () => {
                             Techs I enjoy using:
                         </p>
                         <div className="grid grid-cols-3 gap-6 m-auto mb-4 md:flex justify-center fade-in-socials">
-                            <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" for="html">
+                            <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" htmlFor="html">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" className="mobile-stack-icons" />
                             </a>
-                            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" for="css">
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" htmlFor="css">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" className="mobile-stack-icons" />
                             </a>
-                            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" for="javascript">
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" htmlFor="javascript">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" className="mobile-stack-icons" />
                             </a>
-                            <a href="https://tailwindcss.com/docs/installation" for="tailwind">
+                            <a href="https://tailwindcss.com/docs/installation" htmlFor="tailwind">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" className="mobile-stack-icons" />
                             </a>
-                            <a href="https://react.dev/" for="react">
+                            <a href="https://react.dev/" htmlFor="react">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" className="mobile-stack-icons" />
                             </a>
-                            <a href="https://nextjs.org/docs" for="nextjs">
+                            <a href="https://nextjs.org/docs" htmlFor="nextjs">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" className="mobile-stack-icons" />
                             </a>
-                            <a href="https://nodejs.org/en/docs" for="nodejs">
+                            <a href="https://nodejs.org/en/docs" htmlFor="nodejs">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" className="mobile-stack-icons" />
                             </a>
-                            <a href="https://www.mongodb.com/docs/" for="mongodb">
+                            <a href="https://www.mongodb.com/docs/" htmlFor="mongodb">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" className="mobile-stack-icons" />
                             </a>
-                            <a href="https://mui.com/material-ui/getting-started/" for="mui">
+                            <a href="https://mui.com/material-ui/getting-started/" htmlFor="mui">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg" className="mobile-stack-icons" />
                             </a>
-                            <a href="https://cloud.google.com/docs" for="cloud">
+                            <a href="https://cloud.google.com/docs" htmlFor="cloud">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" className="mobile-stack-icons" />
                             </a>
-                            <a href="https://www.figma.com/developers" for="figma">
+                            <a href="https://www.figma.com/developers" htmlFor="figma">
                                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" className="mobile-stack-icons" />
                             </a>
                         </div>
@@ -152,17 +152,33 @@ const Home = () => {
                 </section>
                 <p className="scroll font-montserrat font-medium text-lapiz-lazuli fade-in-text">Check out my <a href="/accolades" className="accolades">accolades</a> or take a look at some of my recent <a href="#projects" className="accolades">projects</a> below</p>
                 {/* projects */}
-                <section className="projects items-center relative m-auto mt-40 space-y-20" id="projects">
-                    <div className="flex flex-row">
-                        <a href="https://dev-bot.vercel.app/">
-                            <Image
-                                src={DevBotPic}
-                                alt="Dev Bot Pic"
-                                height={325}
-                                width={325}
-                                className="project-images rounded-lg hover:animate-pulse"
-                            />
-                        </a>
+                {/* devbot */}
+                <section className="projects items-center relative m-auto mt-40" id="projects">
+                    <div className="flex flex-row mb-20">
+                        <div className="flex flex-col">
+                            <a href="https://dev-bot.vercel.app/">
+                                <Image
+                                    src={DevBotPic}
+                                    alt="Dev Bot Pic"
+                                    height={325}
+                                    width={325}
+                                    className="project-images rounded-lg hover:animate-pulse"
+                                />
+                            </a>
+                            <div className="flex flex-row space-x-6 mt-3 m-auto">
+                                <a href="https://vitejs.dev/">
+                                    <Image
+                                        src={Vite}
+                                        alt="Vite Pic"
+                                        height={30}
+                                        width={30}
+                                    />
+                                </a>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" htmlFor="javascript">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" className="project-stack-icons" />
+                                </a>
+                            </div>
+                        </div>
                         <div className="flex flex-col items-center justify-center pl-10">
                             <h2 className="text-lapiz-lazuli text-xl font-montserrat font-medium">Dev Bot</h2>
                             <p className="text-gray-600 text-sm font-comfortaa w-60 text-center">a chat bot made with JavaScript and Vite using OpenAI's api to utilize their gpt-3.5-turbo model</p>
@@ -190,9 +206,11 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="flex flex-row">
+                    {/* promptopia */}
+                    <div className="flex flex-row pt-10">
                         <div className="flex flex-col items-center justify-center pr-10">
-                            <h2 className="text-lapiz-lazuli text-xl font-montserrat font-medium">Promptopia</h2>
+                            <h2 className="text-lapiz-lazuli text-xl font-montserrat font-medium mb-0">Promptopia</h2>
+                            <p className="text-gray-600 text-sm m-0">(W.I.P.)</p>
                             <p className="text-gray-600 text-sm font-comfortaa w-80 text-center">a forum for sharing and discovering AI prompts, complete with O-Auth sign-in, made using Next.js, Tailwind and MongoDB</p>
                             <div className="flex flex-row space-x-12 justify-center items-center mt-2">
                                 <a href="https://github.com/ritchiels/nextjs-promptopia" className="flex flex-col items-center no-underline">   
@@ -217,15 +235,28 @@ const Home = () => {
                                 </a>
                             </div>
                         </div>
-                        <a href="https://nextjs-promptopia-kappa.vercel.app/">
-                            <Image
-                                src={PromptopiaPic}
-                                alt="Promptopia Pic"
-                                height={325}
-                                width={325}
-                                className="project-images rounded-lg hover:animate-pulse"
-                            />
-                        </a>
+                        <div className="flex flex-col">
+                            <a href="https://nextjs-promptopia-kappa.vercel.app/">
+                                <Image
+                                    src={PromptopiaPic}
+                                    alt="Promptopia Pic"
+                                    height={325}
+                                    width={325}
+                                    className="project-images rounded-lg hover:animate-pulse"
+                                />
+                            </a>
+                            <div className="flex flex-row space-x-6 m-auto mt-3">
+                                <a href="https://nextjs.org/docs" htmlFor="nextjs">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" className="project-stack-icons" />
+                                </a>
+                                <a href="https://tailwindcss.com/docs/installation" htmlFor="tailwind">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" className="project-stack-icons" />
+                                </a>
+                                <a href="https://www.mongodb.com/docs/" htmlFor="mongodb">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" className="project-stack-icons" />
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </section>
                 {/* modal */}
