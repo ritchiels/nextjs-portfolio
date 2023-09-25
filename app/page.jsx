@@ -14,9 +14,10 @@ import emailjs from '@emailjs/browser'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import DevBotPic from '../img/dev-bot-screen.png'
+import PromptopiaPic from '../img/promptopia-screen.png'
 import Vite from '../img/vite.svg'
-import Notebook from '../img/notebook_S.png'
-import Tea from '../img/tea_S.png'
+import Github from '../img/github.svg'
+import Vercel from '../img/logo-vercel.svg'
 config.autoAddCss = false
 
 
@@ -84,7 +85,6 @@ const Home = () => {
                         />
                     </div>
                     <div className="flex flex-col md:mt-10">
-                        {/* <h2 className="text-3xl font-semibold font-montserrat text-center m-auto text-lapiz-lazuli">Hey 👋 I'm</h2> */}
                         <h1 className="text-4xl md:text-4xl font-bold font-poppins m-auto mt-2 text-lapiz-lazuli fade-in-header">Ritchie Simmons</h1>
                         <div className="flex space-x-16 md:space-x-14 items-center m-auto mt-4 mb-2 text-lapiz-lazuli fade-in-socials">
                             <a href="https://github.com/ritchiels" className="socials">
@@ -150,18 +150,82 @@ const Home = () => {
                     </div>
                     <hr className="fade-in-socials" />
                 </section>
-                <p className="scroll font-montserrat font-medium text-lapiz-lazuli fade-in-text">Check out my <a href="/accolades" className="accolades">accolades</a> or scroll to see some of my recent projects</p>
-                <section className="projects flex flex-row items-center relative m-auto mt-40">
-                    <Image
-                        src={DevBotPic}
-                        alt="Dev Bot Pic"
-                        height={350}
-                        width={350}
-                        className="rounded-lg"
-                    />
-                    <div className="flex flex-col items-center pl-20">
-                        <h2 className="text-lapiz-lazuli text-xl font-montserrat font-medium">Dev Bot</h2>
-                        <p className="text-gray-600 text-sm font-comfortaa w-60 text-center">a chat bot made with JavaScript and Vite using OpenAI's api to utilize their gpt-3.5-turbo model</p>
+                <p className="scroll font-montserrat font-medium text-lapiz-lazuli fade-in-text">Check out my <a href="/accolades" className="accolades">accolades</a> or take a look at some of my recent <a href="#projects" className="accolades">projects</a> below</p>
+                {/* projects */}
+                <section className="projects items-center relative m-auto mt-40 space-y-20" id="projects">
+                    <div className="flex flex-row">
+                        <a href="https://dev-bot.vercel.app/">
+                            <Image
+                                src={DevBotPic}
+                                alt="Dev Bot Pic"
+                                height={325}
+                                width={325}
+                                className="project-images rounded-lg hover:animate-pulse"
+                            />
+                        </a>
+                        <div className="flex flex-col items-center justify-center pl-10">
+                            <h2 className="text-lapiz-lazuli text-xl font-montserrat font-medium">Dev Bot</h2>
+                            <p className="text-gray-600 text-sm font-comfortaa w-60 text-center">a chat bot made with JavaScript and Vite using OpenAI's api to utilize their gpt-3.5-turbo model</p>
+                            <div className="flex flex-row space-x-12 justify-center items-center mt-2">
+                                <a href="https://github.com/ritchiels/vite-js-devbot" className="flex flex-col items-center no-underline">   
+                                    <Image
+                                        src={Github}
+                                        alt="Github"
+                                        height={20}
+                                        width={20}
+                                        className="animate-bounce"
+                                    />
+                                <p className="text-gray-600 text-sm font-comfortaa">Code</p>
+                                </a>
+                                <a href="https://dev-bot.vercel.app/" className="flex flex-col items-center no-underline">
+                                    <Image
+                                        src={Vercel}
+                                        alt="Deployment"
+                                        height={20}
+                                        width={20}
+                                        className="animate-bounce"
+                                    />
+                                <p className="text-gray-600 text-sm font-comfortaa">Demo</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="flex flex-row">
+                        <div className="flex flex-col items-center justify-center pr-10">
+                            <h2 className="text-lapiz-lazuli text-xl font-montserrat font-medium">Promptopia</h2>
+                            <p className="text-gray-600 text-sm font-comfortaa w-80 text-center">a forum for sharing and discovering AI prompts, complete with O-Auth sign-in, made using Next.js, Tailwind and MongoDB</p>
+                            <div className="flex flex-row space-x-12 justify-center items-center mt-2">
+                                <a href="https://github.com/ritchiels/nextjs-promptopia" className="flex flex-col items-center no-underline">   
+                                    <Image
+                                        src={Github}
+                                        alt="Github"
+                                        height={20}
+                                        width={20}
+                                        className="animate-bounce"
+                                    />
+                                <p className="text-gray-600 text-sm font-comfortaa">Code</p>
+                                </a>
+                                <a href="https://nextjs-promptopia-kappa.vercel.app/" className="flex flex-col items-center no-underline">
+                                    <Image
+                                        src={Vercel}
+                                        alt="Deployment"
+                                        height={20}
+                                        width={20}
+                                        className="animate-bounce"
+                                    />
+                                <p className="text-gray-600 text-sm font-comfortaa">Demo</p>
+                                </a>
+                            </div>
+                        </div>
+                        <a href="https://nextjs-promptopia-kappa.vercel.app/">
+                            <Image
+                                src={PromptopiaPic}
+                                alt="Promptopia Pic"
+                                height={325}
+                                width={325}
+                                className="project-images rounded-lg hover:animate-pulse"
+                            />
+                        </a>
                     </div>
                 </section>
                 {/* modal */}
