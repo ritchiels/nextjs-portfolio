@@ -150,11 +150,116 @@ const Home = () => {
                     </div>
                     <hr className="fade-in-socials" />
                 </section>
-                <p className="scroll font-montserrat font-medium text-lapiz-lazuli fade-in-text">Check out my <a href="/accolades" className="accolades">accolades</a> or take a look at some of my recent <a href="#projects" className="accolades">projects</a> below</p>
+                <p className="scroll font-montserrat font-medium text-lapiz-lazuli fade-in-text">Check out my <a href="/accolades" className="accolades animate-pulse text-lapiz-lazuli">accolades</a> or take a look at some of my recent <a href="#projects" className="accolades text-lapiz-lazuli animate-pulse">projects</a> below</p>
                 {/* projects */}
                 {/* devbot */}
-                <section className="projects items-center relative m-auto mt-40" id="projects">
+                <section className="projects items-center relative m-auto mt-40">
+                    <div className="flex flex-row mb-20" id="projects">
+                        <div className="flex flex-col">
+                            <a href="https://dev-bot.vercel.app/">
+                                <Image
+                                    src={DevBotPic}
+                                    alt="Dev Bot Pic"
+                                    height={325}
+                                    width={325}
+                                    className="project-images rounded-lg hover:animate-pulse"
+                                />
+                            </a>
+                            <div className="flex flex-row space-x-6 mt-3 m-auto">
+                                <a href="https://vitejs.dev/">
+                                    <Image
+                                        src={Vite}
+                                        alt="Vite Pic"
+                                        height={30}
+                                        width={30}
+                                    />
+                                </a>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" htmlFor="javascript">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" className="project-stack-icons" />
+                                </a>
+                            </div>
+                        </div>
+                        <div className="flex flex-col items-center justify-center pl-10">
+                            <h2 className="text-lapiz-lazuli text-xl font-montserrat font-medium">Dev Bot</h2>
+                            <p className="text-gray-600 text-sm font-comfortaa w-60 text-center">a chat bot made with JavaScript and Vite using OpenAI's api to utilize their gpt-3.5-turbo model</p>
+                            <div className="flex flex-row space-x-12 justify-center items-center mt-2">
+                                <a href="https://github.com/ritchiels/vite-js-devbot" className="flex flex-col items-center no-underline">   
+                                    <Image
+                                        src={Github}
+                                        alt="Github"
+                                        height={20}
+                                        width={20}
+                                        className="animate-bounce"
+                                    />
+                                <p className="text-gray-600 text-sm font-comfortaa">Code</p>
+                                </a>
+                                <a href="https://dev-bot.vercel.app/" className="flex flex-col items-center no-underline">
+                                    <Image
+                                        src={Vercel}
+                                        alt="Deployment"
+                                        height={20}
+                                        width={20}
+                                        className="animate-bounce"
+                                    />
+                                    <p className="text-gray-600 text-sm font-comfortaa">Demo</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    {/* promptopia */}
                     <div className="flex flex-row mb-20">
+                        <div className="flex flex-col items-center justify-center pr-10">
+                            <h2 className="text-lapiz-lazuli text-xl font-montserrat font-medium mb-0">Promptopia</h2>
+                            <p className="text-gray-600 text-sm m-0">(W.I.P.)</p>
+                            <p className="text-gray-600 text-sm font-comfortaa w-80 text-center">a forum for sharing and discovering AI prompts, complete with O-Auth sign-in, made using Next.js, Tailwind and MongoDB</p>
+                            <div className="flex flex-row space-x-12 justify-center items-center mt-2">
+                                <a href="https://github.com/ritchiels/nextjs-promptopia" className="flex flex-col items-center no-underline">   
+                                    <Image
+                                        src={Github}
+                                        alt="Github"
+                                        height={20}
+                                        width={20}
+                                        className="animate-bounce"
+                                    />
+                                <p className="text-gray-600 text-sm font-comfortaa">Code</p>
+                                </a>
+                                <a href="https://nextjs-promptopia-kappa.vercel.app/" className="flex flex-col items-center no-underline">
+                                    <Image
+                                        src={Vercel}
+                                        alt="Deployment"
+                                        height={20}
+                                        width={20}
+                                        className="animate-bounce"
+                                    />
+                                <p className="text-gray-600 text-sm font-comfortaa">Demo</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div className="flex flex-col">
+                            <a href="https://nextjs-promptopia-kappa.vercel.app/">
+                                <Image
+                                    src={PromptopiaPic}
+                                    alt="Promptopia Pic"
+                                    height={325}
+                                    width={325}
+                                    className="project-images rounded-lg hover:animate-pulse"
+                                />
+                            </a>
+                            <div className="flex flex-row space-x-6 m-auto mt-3">
+                                <a href="https://nextjs.org/docs" htmlFor="nextjs">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" className="project-stack-icons" />
+                                </a>
+                                <a href="https://tailwindcss.com/docs/installation" htmlFor="tailwind">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" className="project-stack-icons" />
+                                </a>
+                                <a href="https://www.mongodb.com/docs/" htmlFor="mongodb">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" className="project-stack-icons" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    {/* next project */}
+                    <div className="flex flex-row">
                         <div className="flex flex-col">
                             <a href="https://dev-bot.vercel.app/">
                                 <Image
@@ -202,58 +307,6 @@ const Home = () => {
                                         className="animate-bounce"
                                     />
                                 <p className="text-gray-600 text-sm font-comfortaa">Demo</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    {/* promptopia */}
-                    <div className="flex flex-row pt-10">
-                        <div className="flex flex-col items-center justify-center pr-10">
-                            <h2 className="text-lapiz-lazuli text-xl font-montserrat font-medium mb-0">Promptopia</h2>
-                            <p className="text-gray-600 text-sm m-0">(W.I.P.)</p>
-                            <p className="text-gray-600 text-sm font-comfortaa w-80 text-center">a forum for sharing and discovering AI prompts, complete with O-Auth sign-in, made using Next.js, Tailwind and MongoDB</p>
-                            <div className="flex flex-row space-x-12 justify-center items-center mt-2">
-                                <a href="https://github.com/ritchiels/nextjs-promptopia" className="flex flex-col items-center no-underline">   
-                                    <Image
-                                        src={Github}
-                                        alt="Github"
-                                        height={20}
-                                        width={20}
-                                        className="animate-bounce"
-                                    />
-                                <p className="text-gray-600 text-sm font-comfortaa">Code</p>
-                                </a>
-                                <a href="https://nextjs-promptopia-kappa.vercel.app/" className="flex flex-col items-center no-underline">
-                                    <Image
-                                        src={Vercel}
-                                        alt="Deployment"
-                                        height={20}
-                                        width={20}
-                                        className="animate-bounce"
-                                    />
-                                <p className="text-gray-600 text-sm font-comfortaa">Demo</p>
-                                </a>
-                            </div>
-                        </div>
-                        <div className="flex flex-col">
-                            <a href="https://nextjs-promptopia-kappa.vercel.app/">
-                                <Image
-                                    src={PromptopiaPic}
-                                    alt="Promptopia Pic"
-                                    height={325}
-                                    width={325}
-                                    className="project-images rounded-lg hover:animate-pulse"
-                                />
-                            </a>
-                            <div className="flex flex-row space-x-6 m-auto mt-3">
-                                <a href="https://nextjs.org/docs" htmlFor="nextjs">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" className="project-stack-icons" />
-                                </a>
-                                <a href="https://tailwindcss.com/docs/installation" htmlFor="tailwind">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" className="project-stack-icons" />
-                                </a>
-                                <a href="https://www.mongodb.com/docs/" htmlFor="mongodb">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" className="project-stack-icons" />
                                 </a>
                             </div>
                         </div>

@@ -18,7 +18,8 @@ module.exports = {
         'cadet-blue': '#93B7BE',
         'lapiz-lazuli': '#376996',
         'french-gray': '#C5CBD3',
-        'white-smoke': '#F1EDEE'
+        'white-smoke': '#F1EDEE',
+        'sky-blue': '#93B7BE'
       },
       fontFamily: {
         comfortaa: ['Comfortaa', 'cursive'],

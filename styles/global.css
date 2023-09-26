@@ -30,7 +30,7 @@
 
 .projects {
     padding-top: 12rem;
-    padding-bottom: 10rem;
+    padding-bottom: 1rem;
 }
 
 .scroll {
@@ -61,7 +61,7 @@ h1 {
 
 
 .accolades {
-    color: #93B7BE;
+    /* color: #93B7BE; */
     text-decoration: none;
 }
 
