@@ -59,7 +59,6 @@ h1 {
     letter-spacing: 3px;
 }
 
-
 .accolades {
     /* color: #93B7BE; */
     text-decoration: none;
@@ -94,8 +93,8 @@ h1 {
 }
 
 .project-stack-icons {
-    height: 30px;
-    width: 30px;
+    height: 25px;
+    width: 25px;
 }
 
 .tailwind-icon {

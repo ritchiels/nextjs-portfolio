@@ -74,7 +74,7 @@ const Home = () => {
         <>
             <Container className="container flex flex-col justify-center items-center overflow-y-auto">
                 {/* profile */}
-                <section className="grid grid-col md:flex items-center md:space-x-8">
+                <section className="grid grid-col md:flex items-center md:space-x-8 fade-in-header">
                     <div>
                         <Image
                             src={ProfilePic}
@@ -150,10 +150,10 @@ const Home = () => {
                     </div>
                     <hr className="fade-in-socials" />
                 </section>
-                <p className="scroll font-montserrat font-medium text-lapiz-lazuli fade-in-text">Check out my <a href="/accolades" className="accolades animate-pulse text-lapiz-lazuli">accolades</a> or take a look at some of my recent <a href="#projects" className="accolades text-lapiz-lazuli animate-pulse">projects</a> below</p>
+                <p className="scroll text-xl font-montserrat font-medium text-lapiz-lazuli fade-in-text">Check out my <a href="/accolades" className="accolades animate-pulse text-lapiz-lazuli">accolades</a> or take a look at some of my recent <a href="#projects" className="accolades text-lapiz-lazuli animate-pulse">projects</a> below</p>
                 {/* projects */}
-                {/* devbot */}
                 <section className="projects items-center relative m-auto mt-40">
+                {/* devbot */}
                     <div className="flex flex-row mb-20" id="projects">
                         <div className="flex flex-col">
                             <a href="https://dev-bot.vercel.app/">
@@ -170,8 +170,8 @@ const Home = () => {
                                     <Image
                                         src={Vite}
                                         alt="Vite Pic"
-                                        height={30}
-                                        width={30}
+                                        height={25}
+                                        width={25}
                                     />
                                 </a>
                                 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" htmlFor="javascript">
@@ -275,8 +275,8 @@ const Home = () => {
                                     <Image
                                         src={Vite}
                                         alt="Vite Pic"
-                                        height={30}
-                                        width={30}
+                                        height={25}
+                                        width={25}
                                     />
                                 </a>
                                 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" htmlFor="javascript">
@@ -351,27 +351,10 @@ const Home = () => {
 
 export default Home
 
-// empty div to help with spacing:
-// <div style={{ width: '5rem' }}></div>
 
 //todo: fill out 'projects' page
 //todo: edit modal buttons (color, positioning), consider changing Poppins
 //todo: turn sections of code into components i.e. stack-icons, profile, etc.
-//todo: add accolades page with certifs and badges, link to it on homepage with svg
+//todo: re-design accolades for flow and aesthetic
 //todo: find optimal way to handle tech-stack/notebook switching spots (simplify code?)
-
-// <div className="md:grid md:grid-cols-2 flex flex-col items-center">
-//     <p className="projects-text text-sm md:text-md font-comfortaa font-semibold mt-4 text-gray-500 fade-in-text">
-//         Click or tap the notebook <br /> to check out some of my projects!
-//     </p>
-//     <p className="projects-text text-sm md:text-md font-comfortaa font-semibold mt-4 text-gray-500 fade-in-text">
-//         ...or the mug to see <br /> some of my accolades
-//     </p>
-//     <a href="/projects" className="fade-in-socials">
-//         <Image src={Notebook} className="md:m-auto" alt="projects" height={300} width={300} />
-//     </a>
-//     <a href="/accolades" className="fade-in-socials">
-//         <Image src={Tea} className="ml-10 md:ml-12" alt="accolades" height={175} width={175} />
-//     </a>
-// </div>    
-
+//todo: change Name font and apply tailwind gradient
