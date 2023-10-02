@@ -15,6 +15,7 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import DevBotPic from '../img/dev-bot-screen.png'
 import PromptopiaPic from '../img/promptopia-screen.png'
+import SumUpPic from '../img/sum-up-screen.png'
 import Vite from '../img/vite.svg'
 import Github from '../img/github.svg'
 import Vercel from '../img/logo-vercel.svg'
@@ -261,10 +262,10 @@ const Home = () => {
                     {/* next project */}
                     <div className="flex flex-row">
                         <div className="flex flex-col">
-                            <a href="https://dev-bot.vercel.app/">
+                            <a href="https://sum-up.vercel.app/">
                                 <Image
-                                    src={DevBotPic}
-                                    alt="Dev Bot Pic"
+                                    src={SumUpPic}
+                                    alt="Sum Up Pic"
                                     height={325}
                                     width={325}
                                     className="project-images rounded-lg hover:animate-pulse"
@@ -279,16 +280,22 @@ const Home = () => {
                                         width={25}
                                     />
                                 </a>
-                                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" htmlFor="javascript">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" className="project-stack-icons" />
+                                <a href="https://react.dev/" htmlFor="react">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" className="project-stack-icons" />
+                                </a>
+                                <a href="https://tailwindcss.com/docs/installation" htmlFor="tailwind">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" className="project-stack-icons" />
+                                </a>
+                                <a href="https://redux.js.org/" htmlFor="redux">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" className="project-stack-icons" />
                                 </a>
                             </div>
                         </div>
                         <div className="flex flex-col items-center justify-center pl-10">
-                            <h2 className="text-lapiz-lazuli text-xl font-montserrat font-medium">Dev Bot</h2>
-                            <p className="text-gray-600 text-sm font-comfortaa w-60 text-center">a chat bot made with JavaScript and Vite using OpenAI's api to utilize their gpt-3.5-turbo model</p>
+                            <h2 className="text-lapiz-lazuli text-xl font-montserrat font-medium">Sum Up</h2>
+                            <p className="text-gray-600 text-sm font-comfortaa w-60 text-center">a SaaS project made with React that allows users to sum up an article from a given URL</p>
                             <div className="flex flex-row space-x-12 justify-center items-center mt-2">
-                                <a href="https://github.com/ritchiels/vite-js-devbot" className="flex flex-col items-center no-underline">   
+                                <a href="https://github.com/ritchiels/sum-up-ai" className="flex flex-col items-center no-underline">   
                                     <Image
                                         src={Github}
                                         alt="Github"
@@ -298,7 +305,7 @@ const Home = () => {
                                     />
                                 <p className="text-gray-600 text-sm font-comfortaa">Code</p>
                                 </a>
-                                <a href="https://dev-bot.vercel.app/" className="flex flex-col items-center no-underline">
+                                <a href="https://sum-up.vercel.app/" className="flex flex-col items-center no-underline">
                                     <Image
                                         src={Vercel}
                                         alt="Deployment"
@@ -352,9 +359,7 @@ const Home = () => {
 export default Home
 
 
-//todo: fill out 'projects' page
 //todo: edit modal buttons (color, positioning), consider changing Poppins
-//todo: turn sections of code into components i.e. stack-icons, profile, etc.
 //todo: re-design accolades for flow and aesthetic
-//todo: find optimal way to handle tech-stack/notebook switching spots (simplify code?)
+//todo: set up mobile view
 //todo: change Name font and apply tailwind gradient
