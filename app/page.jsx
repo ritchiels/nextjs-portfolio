@@ -207,7 +207,7 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                    {/* promptopia */}
+                {/* promptopia */}
                     <div className="flex flex-row mb-20">
                         <div className="flex flex-col items-center justify-center pr-10">
                             <h2 className="text-lapiz-lazuli text-xl font-montserrat font-medium mb-0">Promptopia</h2>
@@ -259,7 +259,7 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                    {/* next project */}
+                {/* next project */}
                     <div className="flex flex-row">
                         <div className="flex flex-col">
                             <a href="https://sum-up.vercel.app/">
@@ -363,3 +363,4 @@ export default Home
 //todo: re-design accolades for flow and aesthetic
 //todo: set up mobile view
 //todo: change Name font and apply tailwind gradient
+//todo: make anchors open in new tab: target="_blank"
