@@ -83,6 +83,7 @@ const Home = () => {
                             height={250}
                             width={250}
                             className="profile-image m-auto rounded-full fade-in-pic"
+                            priority
                         />
                     </div>
                     <div className="flex flex-col md:mt-10">
