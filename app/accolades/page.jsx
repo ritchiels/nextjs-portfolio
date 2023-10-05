@@ -15,22 +15,22 @@ const Accolades = () => {
         <div className="accolades-container justify-center">
             <div className="card-group">
                 <div className="little-card">
-                    <Image src={Bootstrap} alt="Bootstrap" />
+                    <Image src={Bootstrap} alt="Bootstrap Badge" />
+                </div>
+                <div className="little-card">
+                    <Image src={ReactPic} alt="React Badge" />
+                </div>
+                <div className="little-card">
+                    <Image src={ReactNativePic} alt="React Native Badge" />
+                </div>
+                <div className="little-card">
+                    <Image src={BackEnd} alt="Back End Badge" />
                 </div>
                 <div className="big-card card">
                     <Image src={FrontEnd} alt="Front End Cert" />
                 </div>
-                <div className="little-card card">
-
-                </div>
-                <div className="little-card card">
-
-                </div>
                 <div className="big-card card">
                     <Image src={FullStack} alt="Full Stack Cert" />
-                </div>
-                <div className="little-card card">
-
                 </div>
             </div>
         </div>
