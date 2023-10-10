@@ -13,7 +13,7 @@ import Workspace from '../../img/workspace-addons.png'
 const Accolades = () => {
     return (
         <div className="accolades-container justify-center">
-            <div className="card-group">
+            <div className="card-group mb-20">
                 <div className="little-card">
                     <Image src={Bootstrap} alt="Bootstrap Badge" />
                 </div>
