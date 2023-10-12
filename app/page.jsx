@@ -361,7 +361,7 @@ export default Home
 
 
 //todo: edit modal buttons (color, positioning), consider changing Poppins
-//todo: re-design accolades for flow and aesthetic
+//todo: add bootcamp description / experience to accolades
 //todo: set up mobile view
 //todo: change Name font and apply tailwind gradient
 //todo: make anchors open in new tab: target="_blank"
