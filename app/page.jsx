@@ -365,3 +365,5 @@ export default Home
 //todo: set up mobile view
 //todo: change Name font and apply tailwind gradient
 //todo: make anchors open in new tab: target="_blank"
+//todo: add Dark Mode
+//todo: switch to create-react-app?
