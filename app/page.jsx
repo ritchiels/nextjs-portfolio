@@ -367,3 +367,4 @@ export default Home
 //todo: make anchors open in new tab: target="_blank"
 //todo: add Dark Mode
 //todo: switch to create-react-app?
+//todo: remove text at bottom of home and create navbar for links (projects/accolades)
