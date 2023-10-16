@@ -26,6 +26,7 @@ module.exports = {
         poppins: ['Poppins', 'sans-serif'],
         robotoslab: ['Roboto Slab', 'serif'],
         montserrat: ['Montserrat', 'sans-serif'],
+        dmserif: ['DM Serif Display', 'serif'],
       }
     },
   },

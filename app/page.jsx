@@ -19,6 +19,14 @@ import SumUpPic from '../img/sum-up-screen.png'
 import Vite from '../img/vite.svg'
 import Github from '../img/github.svg'
 import Vercel from '../img/logo-vercel.svg'
+import React from 'react'
+import FrontEnd from '../img/frontendcertif.png'
+import FullStack from '../img/fullstackcertif.png'
+import Bootstrap from '../img/Bootstrap_Course_Completion.png'
+import ReactPic from '../img/React_Course_Completion.png'
+import ReactNativePic from '../img/React_Native_Course_Completion.png'
+import BackEnd from '../img/Node_Express_MongoDB_Course_Completion.png'
+import Workspace from '../img/workspace-addons.png'
 config.autoAddCss = false
 
 
@@ -75,19 +83,19 @@ const Home = () => {
         <>
             <Container className="container flex flex-col justify-center items-center overflow-y-auto">
                 {/* profile */}
-                <section className="grid grid-col md:flex items-center md:space-x-8 fade-in-header">
+                <section className="grid grid-col mt-10 md:flex items-center md:space-x-8 fade-in-header">
                     <div>
                         <Image
                             src={ProfilePic}
                             alt="Profile Image"
-                            height={250}
-                            width={250}
+                            height={375}
+                            width={437}
                             className="profile-image m-auto rounded-full fade-in-pic"
                             priority
                         />
                     </div>
                     <div className="flex flex-col md:mt-10">
-                        <h1 className="text-4xl md:text-4xl font-bold font-poppins m-auto mt-2 text-lapiz-lazuli fade-in-header">Ritchie Simmons</h1>
+                        <h1 className="intro-text text-4xl md:text-5xl font-dmserif font-bold m-auto mt-2 text-lapiz-lazuli fade-in-header bg-gradient-to-r from-sky-600 to-sky-800 text-transparent bg-clip-text">Hey, I'm<br /><span className="md:text-8xl ml-5">Ritchie</span></h1>
                         <div className="flex space-x-16 md:space-x-14 items-center m-auto mt-4 mb-2 text-lapiz-lazuli fade-in-socials">
                             <a href="https://github.com/ritchiels" className="socials">
                                 <FontAwesomeIcon icon={faGithub} size={isMediumScreen ? 'xl' : '2xl'} />
@@ -108,7 +116,7 @@ const Home = () => {
                         </p>
                     </div>
                 </section>
-                <section className="mt-4">
+                <section className="pt-5">
                     <hr className="fade-in-socials" />
                     <div className="flex flex-col">
                         <p className="text-2xl md:text-sm text-center font-bold font-comfortaa text-gray-500 mt-2 mb-10 md:mb-4 fade-in-text">
@@ -152,11 +160,12 @@ const Home = () => {
                     </div>
                     <hr className="fade-in-socials" />
                 </section>
-                <p className="scroll text-xl font-montserrat font-medium text-lapiz-lazuli fade-in-text">Check out my <a href="/accolades" className="accolades animate-pulse text-lapiz-lazuli">accolades</a> or take a look at some of my recent <a href="#projects" className="accolades text-lapiz-lazuli animate-pulse">projects</a> below</p>
                 {/* projects */}
                 <section className="projects items-center relative m-auto mt-40">
+                    {/* <h1 className="section-headers text-3xl text-center font-dmserif font-bold bg-gradient-to-r from-sky-600 to-sky-800 text-transparent bg-clip-text" id="projects">Recent Projects</h1>
+                    <hr className="mb-10"/> */}
                 {/* devbot */}
-                    <div className="flex flex-row mb-20" id="projects">
+                    <div className="flex flex-row mb-20">
                         <div className="flex flex-col">
                             <a href="https://dev-bot.vercel.app/">
                                 <Image
@@ -261,7 +270,7 @@ const Home = () => {
                         </div>
                     </div>
                 {/* next project */}
-                    <div className="flex flex-row">
+                    <div className="flex flex-row mb-10">
                         <div className="flex flex-col">
                             <a href="https://sum-up.vercel.app/">
                                 <Image
@@ -316,6 +325,31 @@ const Home = () => {
                                     />
                                 <p className="text-gray-600 text-sm font-comfortaa">Demo</p>
                                 </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                {/* accolades */}
+                <section className="items-center relative" id="accolades">
+                    <div className="accolades-container justify-center">
+                        <div className="card-group mb-20">
+                            <div className="little-card">
+                                <Image src={Bootstrap} alt="Bootstrap Badge" />
+                            </div>
+                            <div className="little-card">
+                                <Image src={ReactPic} alt="React Badge" />
+                            </div>
+                            <div className="little-card">
+                                <Image src={ReactNativePic} alt="React Native Badge" />
+                            </div>
+                            <div className="little-card">
+                                <Image src={BackEnd} alt="Back End Badge" />
+                            </div>
+                            <div className="big-card card">
+                                <Image src={FrontEnd} alt="Front End Cert" />
+                            </div>
+                            <div className="big-card card">
+                                <Image src={FullStack} alt="Full Stack Cert" />
                             </div>
                         </div>
                     </div>
