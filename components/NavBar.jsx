@@ -38,18 +38,19 @@ const NavBar = () => {
                         <NavLink href="/contact">Contact</NavLink>
                     </NavItem>
                 </Nav>
-                <div className="ml-3">
-                    The current theme is: {theme}
-                    <Button color="primary" onClick={() => setTheme('light')} className="ml-2">
-                        Light Mode
-                    </Button>
-                    <Button color="dark" onClick={() => setTheme('dark')} className="ml-2">
-                        Dark Mode
-                    </Button>
-                </div>
             </div>
         </Navbar>
     )
 };
 
 export default NavBar;
+
+{/* <div className="ml-3">
+    The current theme is: {theme}
+    <Button color="primary" onClick={() => setTheme('light')} className="ml-2">
+        Light Mode
+    </Button>
+    <Button color="dark" onClick={() => setTheme('dark')} className="ml-2">
+        Dark Mode
+    </Button>
+</div> */}

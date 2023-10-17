@@ -3,7 +3,7 @@
 import '@/styles/global.css'
 import Head from 'next/head';
 import Footer from '@/components/Footer'
-import NavBar from '@/components/Nav';
+import NavBar from '@/components/NavBar';
 import Providers from '../utils/providers'
 
 export const metadata = {
