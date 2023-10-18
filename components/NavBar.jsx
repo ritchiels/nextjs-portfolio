@@ -2,9 +2,21 @@ import { useState, useEffect } from 'react';
 import { useTheme } from "next-themes";
 import Image from 'next/image';
 import { Navbar, NavbarBrand, Nav, NavItem, NavLink, Button } from 'reactstrap';
+import EmailModal from './EmailModal';
 import Smeech from '../public/favicon.ico';
 
 const NavBar = () => {
+
+    const [showEmailModal, setShowEmailModal] = useState(false);
+    const [showToast, setShowToast] = useState(false);
+
+    const toggleEmailModal = () => {
+        setShowEmailModal(!showEmailModal);
+    };
+
+    const toggleToast = () => {
+        setShowToast(!showToast);
+    };
 
     return (
         <Navbar color="light" light expand="md" className="bg-gray-400 p-4 text-lapiz-lazuli sticky-top py-0 my-0">
@@ -27,8 +39,9 @@ const NavBar = () => {
                         <NavLink href="#accolades">Accolades</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink href="/contact">Contact</NavLink>
+                        <NavLink href="#" onClick={() => toggleEmailModal()}>Contact</NavLink>
                     </NavItem>
+                    <EmailModal isOpen={showEmailModal} toggleModal={toggleEmailModal} toggleToast={toggleToast} />
                 </Nav>
             </div>
         </Navbar>

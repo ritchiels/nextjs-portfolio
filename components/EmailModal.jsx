@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import {
     Button,
     Form,
@@ -10,19 +10,37 @@ import {
     ModalBody,
     ModalFooter,
     ModalHeader,
-    Toast
+    Toast,
+    ToastBody
 } from 'reactstrap'
 import emailjs from '@emailjs/browser'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const EmailModal = () => {
-    const [modal, setModal] = useState(false);
 
-    const toggle = () => setModal(!modal);
+    const [showEmailModal, setShowEmailModal] = useState(false);
+    const [showToast, setShowToast] = useState(false);
+    // email logic
+    const toggleEmailModal = () => {
+        console.log('toggling email modal');
+        setShowEmailModal(!showEmailModal);
+    };
 
-    console.log('Email toggle prop:', toggle);
+    const toggleToast = () => {
+        setShowToast(!showToast);
+    }
 
     const form = useRef();
+
+    useEffect(() => {
+        if (showToast) {
+            const timer = setTimeout(() => {
+                toggleToast();
+            }, 3000);
+
+            return () => clearTimeout(timer);
+        }
+    }, [showToast])
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -39,33 +57,47 @@ const EmailModal = () => {
             }, (error) => {
                 console.log(error.text);
             });
+
+        toggleToast();
+        toggleEmailModal();
     };
 
     return (
         <>
-            <Modal isOpen={modal} style={{ zIndex: 1100 }}>
-                <ModalHeader toggle={toggle}>
+            <Modal isOpen={showEmailModal} toggle={toggleEmailModal} centered>
+                <ModalHeader className="modal-header text-lapiz-lazuli font-poppins">
                     Send me an email 📩
                 </ModalHeader>
                 <ModalBody>
-                    <form ref={form} onSubmit={sendEmail}>
+                    <form ref={form} className="modal-form font-poppins" onSubmit={sendEmail}>
                         <label>Name: </label>
-                        <input type="text" name="user_name" />
-                        <label>Email: </label>
-                        <input type="email" name="user_email" />
+                        <input type="text" name="from_name" />
+                        <label>Email Address: </label>
+                        <input type="email" name="email" />
+                        <label>Subject: </label>
+                        <input type="subject" name="subject" />
                         <label>Message: </label>
                         <textarea name="message" />
-                        <input type="submit" value="Send" />
                     </form>
                 </ModalBody>
-                <ModalFooter>
+                <ModalFooter className="flex justify-between">
+                    <Button color="" onClick={toggleEmailModal} className="text-lapiz-lazuli">
+                        Close
+                    </Button>
                     <Button color="primary" type="submit" onClick={sendEmail}>Send</Button>
                 </ModalFooter>
             </Modal>
+            <div className={`toast-overlay ${showToast ? "show" : ""}`}>
+                <Toast isOpen={showToast} toggle={toggleToast} className="email-toast" id="custom-toast">
+                    <ToastBody className="text-center bg-success" toggle={toggleToast}>
+                        Email Sent Successfully <span className="ml-1">✔</span> <br />Thanks for reaching out
+                    </ToastBody>
+                </Toast>
+            </div>
         </>
     )
 }
 
-export default EmailModal
+export default EmailModal;
 
-    //add Toast to show email was sent successfully
+//add Toast to show email was sent successfully

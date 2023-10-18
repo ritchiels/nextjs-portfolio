@@ -162,8 +162,8 @@ const Home = () => {
                 </section>
                 {/* projects */}
                 <section className="projects items-center relative m-auto mt-30">
-                {/* devbot */}
                     <div className="spacer" style={{ height: '80px' }} id="projects"></div>
+                {/* devbot */}
                     <div className="flex flex-row mb-20">
                         <div className="flex flex-col">
                             <a href="https://dev-bot.vercel.app/">
@@ -396,8 +396,7 @@ export default Home
 //todo: edit modal buttons (color, positioning), consider changing Poppins
 //todo: add bootcamp description / experience to accolades
 //todo: set up mobile view
-//todo: change Name font and apply tailwind gradient
 //todo: make anchors open in new tab: target="_blank"
 //todo: add Dark Mode
 //todo: switch to create-react-app?
-//todo: remove text at bottom of home and create navbar for links (projects/accolades)
+//todo: get email working in navbar
