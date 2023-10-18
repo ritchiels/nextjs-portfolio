@@ -6,21 +6,19 @@ import Footer from '@/components/Footer'
 import NavBar from '@/components/NavBar';
 import Providers from '../utils/providers'
 
-export const metadata = {
-    title: "Ritchie's Portfolio",
-    description: 'Full-Stack React Developer',
-}
-
 export default function RootLayout({ children }) {
     return (
-        <>
-            <Head>
-                <title>{metadata.title}</title>
-            </Head>
-            <Providers>
-                <NavBar />
-                {children}
-            </Providers>
-        </>
+        <html lang="en">
+            <body>
+                <Head>
+                    <title>Ritchie's Portfolio</title>
+                    <meta name="description" content="Full-Stack React Developer" />
+                </Head>
+                <Providers>
+                    <NavBar />
+                    {children}
+                </Providers>
+            </body>
+        </html>
     );
 }

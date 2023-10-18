@@ -1,33 +1,25 @@
 import { useState, useEffect } from 'react';
 import { useTheme } from "next-themes";
+import Image from 'next/image';
 import { Navbar, NavbarBrand, Nav, NavItem, NavLink, Button } from 'reactstrap';
 import Smeech from '../public/favicon.ico';
 
 const NavBar = () => {
-    const [mounted, setMounted] = useState(false);
-    const { theme, setTheme } = useTheme();
-
-    useEffect(() => {
-        setMounted(true)
-    }, [])
-
-    if (!mounted) {
-        return null
-    }
 
     return (
-        <Navbar color="light" light expand="md" className="bg-gray-400 p-4">
-            <div className="nav-container text-lapiz-lazuli">
+        <Navbar color="light" light expand="md" className="bg-gray-400 p-4 text-lapiz-lazuli sticky-top py-0 my-0">
+            <div className="d-flex justify-content-between align-items-center w-100 text-lapiz-lazuli">
                 <NavbarBrand className="d-flex align-items-center">
-                    <img
+                    <Image
                         src={Smeech}
                         alt="Thumbnail"
-                        className="mr-2"
-                        style={{ width: '50px', height: '50px', borderRadius: '50%' }}
+                        height={30}
+                        width={30}
+                        className="mr-2 rounded-full"
                     />
-                    <h1>Ritchie L. Simmons</h1>
+                    <h1 className="text-sm font-poppins font-semibold text-lapiz-lazuli mb-0">Ritchie Simmons, Web Dev</h1>
                 </NavbarBrand>
-                <Nav className="ml-auto" navbar>
+                <Nav className="ml-auto space-x-2 font-poppins" navbar>
                     <NavItem>
                         <NavLink href="#projects">Projects</NavLink>
                     </NavItem>
@@ -44,13 +36,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-
-{/* <div className="ml-3">
-    The current theme is: {theme}
-    <Button color="primary" onClick={() => setTheme('light')} className="ml-2">
-        Light Mode
-    </Button>
-    <Button color="dark" onClick={() => setTheme('dark')} className="ml-2">
-        Dark Mode
-    </Button>
-</div> */}

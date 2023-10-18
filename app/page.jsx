@@ -83,7 +83,7 @@ const Home = () => {
         <>
             <Container className="container flex flex-col justify-center items-center overflow-y-auto">
                 {/* profile */}
-                <section className="grid grid-col mt-10 md:flex items-center md:space-x-8 fade-in-header">
+                <section className="grid grid-col md:flex items-center md:space-x-8 fade-in-header" id="home">
                     <div>
                         <Image
                             src={ProfilePic}
@@ -161,10 +161,9 @@ const Home = () => {
                     <hr className="fade-in-socials" />
                 </section>
                 {/* projects */}
-                <section className="projects items-center relative m-auto mt-40">
-                    {/* <h1 className="section-headers text-3xl text-center font-dmserif font-bold bg-gradient-to-r from-sky-600 to-sky-800 text-transparent bg-clip-text" id="projects">Recent Projects</h1>
-                    <hr className="mb-10"/> */}
+                <section className="projects items-center relative m-auto mt-30">
                 {/* devbot */}
+                    <div className="spacer" style={{ height: '80px' }} id="projects"></div>
                     <div className="flex flex-row mb-20">
                         <div className="flex flex-col">
                             <a href="https://dev-bot.vercel.app/">

@@ -29,6 +29,10 @@
     padding-top: 200px;
 }
 
+.spacer {
+    visibility: hidden;
+}
+
 .projects {
     padding-top: 12rem;
     padding-bottom: 1rem;
