@@ -83,7 +83,8 @@ const Home = () => {
         <>
             <Container className="container flex flex-col justify-center items-center overflow-y-auto">
                 {/* profile */}
-                <section className="grid grid-col md:flex items-center md:space-x-8 fade-in-header" id="home">
+                <div className="spacer" style={{ height: '175px' }} id="home"></div>
+                <section className="grid grid-col md:flex items-center md:space-x-8 fade-in-header">
                     <div>
                         <Image
                             src={ProfilePic}
