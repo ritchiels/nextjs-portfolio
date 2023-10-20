@@ -1,7 +1,16 @@
 'use client';
 
 import { useEffect, useState, useRef } from 'react'
-import { Button, Container, Modal, ModalHeader, ModalBody, ModalFooter, Toast, ToastHeader, ToastBody } from 'reactstrap';
+import { 
+    Button, 
+    Card, 
+    Container, 
+    Modal, 
+    ModalHeader, 
+    ModalBody, 
+    ModalFooter, 
+    Toast,  
+    ToastBody } from 'reactstrap';
 import Image from 'next/image'
 import ProfilePic from '../public/rich-prof.jpg'
 import EmailModal from '@/components/EmailModal';
@@ -269,7 +278,7 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                {/* next project */}
+                {/* sum up */}
                     <div className="flex flex-row mb-10">
                         <div className="flex flex-col">
                             <a href="https://sum-up.vercel.app/">
@@ -347,6 +356,11 @@ const Home = () => {
                             </div>
                             <div className="big-card card">
                                 <Image src={FrontEnd} alt="Front End Cert" />
+                            </div>
+                            <div className="desc-card">
+                                <Card>
+                                    this is a description for the card
+                                </Card>
                             </div>
                             <div className="big-card card">
                                 <Image src={FullStack} alt="Full Stack Cert" />

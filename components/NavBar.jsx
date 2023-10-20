@@ -14,7 +14,6 @@ import {
     ModalFooter,
     Toast,
     ToastBody } from 'reactstrap';
-import EmailModal from './EmailModal';
 import emailjs from '@emailjs/browser';
 import Smeech from '../public/favicon.ico';
 
@@ -92,8 +91,6 @@ const NavBar = () => {
                             <NavLink href="#" onClick={toggleEmailModal}>Contact</NavLink>
                         </button>
                     </NavItem>
-                    {/* {showEmailModal && <EmailModal toggle={toggleEmailModal} />} */}
-                    {/* <EmailModal isOpen={showEmailModal} toggleModal={toggleEmailModal} toggleToast={toggleToast} /> */}
                 </Nav>
             </div>
             <Modal isOpen={showEmailModal} toggle={toggleEmailModal} centered>
