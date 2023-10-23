@@ -4,6 +4,8 @@ import { useEffect, useState, useRef } from 'react'
 import { 
     Button, 
     Card, 
+    CardTitle,
+    CardBody,
     Container, 
     Modal, 
     ModalHeader, 
@@ -359,7 +361,12 @@ const Home = () => {
                             </div>
                             <div className="desc-card">
                                 <Card>
-                                    this is a description for the card
+                                    <CardTitle className="text-center mb-0 mt-2 text-xl font-semibold font-montserrat">
+                                        NuCamp
+                                    </CardTitle>
+                                    <CardBody className="text-center px-4 py-1 mb-2">
+                                        Completed an intensive 6-month full-stack web development bootcamp covering front-end models like Bootstrap, React & React Native, as well as back-end techs like Node.js & MongoDB.
+                                    </CardBody>
                                 </Card>
                             </div>
                             <div className="big-card card">
