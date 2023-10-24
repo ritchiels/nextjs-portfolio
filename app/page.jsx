@@ -416,9 +416,6 @@ export default Home
 
 
 //todo: edit modal buttons (color, positioning), consider changing Poppins
-//todo: add bootcamp description / experience to accolades
 //todo: set up mobile view
 //todo: make anchors open in new tab: target="_blank"
 //todo: add Dark Mode
-//todo: switch to create-react-app?
-//todo: get email working in navbar
