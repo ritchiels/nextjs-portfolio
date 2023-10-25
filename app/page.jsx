@@ -120,10 +120,10 @@ const Home = () => {
                             </a>
                             {showEmailModal && <EmailModal toggle={toggleEmailModal} />}
                         </div>
-                        <p className="text-lg md:text-md text-center font-bold font-comfortaa text-gray-500 mt-4 ml-2 mb-2 fade-in-text">
+                        <p className="text-lg md:text-md text-center font-bold font-comfortaa text-gray-500 mt-4 ml-2 mb-2">
                             Full-stack React developer
                         </p>
-                        <p className="text-md md:text-sm text-center font-semibold font-comfortaa text-gray-500 mt-2 ml-2 mb-4 fade-in-text">
+                        <p className="text-md md:text-sm text-center font-semibold font-comfortaa text-gray-500 mt-2 ml-2 mb-2">
                             📍 Florida, USA
                         </p>
                     </div>
@@ -365,7 +365,7 @@ const Home = () => {
                                         NuCamp
                                     </CardTitle>
                                     <CardBody className="text-center px-4 py-1 mb-2">
-                                        Completed an intensive 6-month full-stack web development bootcamp covering front-end models like Bootstrap, React & React Native, as well as back-end techs like Node.js & MongoDB.
+                                        Graduated from an intensive 6-month full-stack bootcamp covering front-end models like Bootstrap, React & React Native, as well as back-end techs like Node.js & MongoDB.
                                     </CardBody>
                                 </Card>
                             </div>
@@ -415,7 +415,7 @@ const Home = () => {
 export default Home
 
 
-//todo: edit modal buttons (color, positioning), consider changing Poppins
+//todo: edit modal, consider changing Poppins
 //todo: set up mobile view
 //todo: make anchors open in new tab: target="_blank"
 //todo: add Dark Mode

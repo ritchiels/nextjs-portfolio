@@ -50,8 +50,8 @@
     letter-spacing: 4px;
 }
 
-.section-headers {
-    line-height: 1.5;
+.nav-header {
+    font-size: 16px;
 }
 
 .project-images {
@@ -81,11 +81,11 @@ h1 {
     color: inherit;
     text-decoration: none;
 
-    transition: color 0.1s ease;
+    transition: color 0.05s ease;
     
     &:hover {
         color: #93B7BE;
-        transition-delay: 0.1s ease;
+        transition-delay: 0.05s ease;
     }
 }
 
@@ -113,6 +113,8 @@ h1 {
     margin-left: 4px;
     margin-right: 4px;
 }
+
+
 /*email modal*/
 .modal-header {
     display: flex;
@@ -219,6 +221,7 @@ h1 {
     }
 }
 
+
 /*accolades*/
 .accolades-container {
     margin: 0;
@@ -302,7 +305,6 @@ h1 {
     transform: translate(150%, 150%);
 }
 
-/*streak*/
 
 /*fade*/
 
@@ -331,5 +333,3 @@ h1 {
         justify-content: start;
     }
 }
-
-/*5:48*/

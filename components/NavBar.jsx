@@ -74,7 +74,7 @@ const NavBar = () => {
                         width={30}
                         className="mr-2 rounded-full"
                     />
-                    <h1 className="text-sm font-poppins font-semibold text-lapiz-lazuli mb-0">Ritchie Simmons, Web Dev</h1>
+                    <h2 className="nav-header font-poppins font-semibold text-lapiz-lazuli mb-0">Web Dev Ritchie</h2>
                 </NavbarBrand>
                 <Nav className="ml-auto space-x-2 font-poppins" navbar>
                     <NavItem>
