@@ -420,4 +420,4 @@ export default Home
 //todo: make anchors open in new tab: target="_blank"
 //todo: add Dark Mode
 
-//daily
+//alive
