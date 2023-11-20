@@ -419,5 +419,5 @@ export default Home
 //todo: set up mobile view
 //todo: make anchors open in new tab: target="_blank"
 //todo: add Dark Mode
-
+//todo: remove fade-ins
 //review
